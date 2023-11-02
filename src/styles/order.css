@@ -1,0 +1,9 @@
+.modal-content {
+  margin-top: 20%;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: rgba(255, 165, 0, 0.5);
+}
+
+.modal-body {
+  background-color: rgba(0, 0, 0, 0.8);
+}

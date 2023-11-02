@@ -1,0 +1,287 @@
+{
+  "breakfast": [
+    {
+      "name": "Argentinian Breakfast",
+      "description": "Smoked ham & Provolone Cheese Croissant or Baguette, served with coffee",
+      "price": "8.99",
+      "image": "argentinianbf.jpg"
+    },
+    {
+      "name": "French Toast",
+      "description": "French toast from scratch, topped with powdered sugar and fruits",
+      "price": "8.99",
+      "image": "frenchtoast.jpg"
+    },
+    {
+      "name": "Continental Breakfast",
+      "description": "Smoked ham & Provolone Cheese Egg Tortilla, served with coffee",
+      "price": "13.99",
+      "image": "continentalbreakfast.jpg"
+    },
+    {
+      "name": "Spinach Egg Tortilla",
+      "description": "Fresh Spinach Egg Tortilla, served with buttertoast",
+      "price": "13.99",
+      "image": "spinachomelette.jpg"
+    },
+    {
+      "name": "Fruit Waffles",
+      "description": "Homemade waffles, with fruits topping.",
+      "price": "13.99",
+      "image": "fruitwaffles.jpg"
+    },
+    {
+      "name": "Chicken & Waffles",
+      "description": "Homemade waffles, with fried chicken tenders.",
+      "price": "13.99",
+      "image": "chicken&waffles.jpg"
+    },
+    {
+      "name": "Avocado Smoked Salmon Bruschetta",
+      "description": "Delicious sliced french baguette, with an avocado & smoked salmon salad.",
+      "price": "18.99",
+      "image": "avosmksalmonbrusch.jpg"
+    },
+    {
+      "name": "New York Steak Brunch",
+      "description": "12oz New York Steak topped with two eggs and noisette potatoes.",
+      "price": "29.99",
+      "image": "nybrunch.jpg"
+    }
+  ],
+  "appetizer": [
+    {
+      "name": "Provoletta",
+      "description": "Melted provolone cheese with spices",
+      "price": "7.99",
+      "image": ""
+    }
+  ],
+  "entrees": [
+    {
+      "name": "Meat Skewer",
+      "description": "8oz Flank steak pieces with grilled vegetables",
+      "price": "29.99",
+      "image": "nybrunch.jpg"
+    },
+    {
+      "name": "Short Ribs",
+      "description": "14oz Short ribs",
+      "price": "29.99",
+      "image": "shortribs.jpg"
+    },
+    {
+      "name": "Skirt Steak",
+      "description": "6oz/12oz  Churrasco steak",
+      "price": "29.99",
+      "image": "nybrunch.jpg"
+    },
+    {
+      "name": "Ribeye Steak",
+      "description": "Juicy 14oz steak, topped with garlic butter and rosemary",
+      "price": "34.99",
+      "image": "nybrunch.jpg"
+    },
+    {
+      "name": "Meat Skewer",
+      "description": "8oz Flank steak pieces with grilled vegetables",
+      "price": "29.99",
+      "image": "nybrunch.jpg"
+    },
+    {
+      "name": "White Fish & Shrimp",
+      "description": "Grilled Swai Fish, topped with garlic shrimp and menier sauce",
+      "price": "22.99",
+      "image": "fish&shrimp.jpg"
+    }
+  ],
+  "specialties": [
+    {
+      "name": "Ribeye Steak",
+      "description": "Juicy 14oz steak, topped with garlic butter and rosemary",
+      "price": "34.99",
+      "image": ""
+    },
+    {
+      "name": "Loin Cartoccio",
+      "description": "Fillet mignon wrapped with bacon, served on top of a delicious creamy mushroom cartoccio",
+      "price": "44.99",
+      "image": ""
+    },
+    {
+      "name": "Salmon Cartoccio",
+      "description": "Grilled Salmon, served on top of a delicious creamy mushroom cartoccio",
+      "price": "44.99",
+      "image": ""
+    },
+    {
+      "name": "Grilled T-Bone",
+      "description": "Grilled T-Bone Steak, marinated in red wine and served on a bed of mushroom risotto",
+      "price": "44.99",
+      "image": ""
+    }
+  ],
+  "mixGrills": [
+    {
+      "name": "Mix Grill For Two",
+      "description": "A variety of meats, including flank steak, short ribs, and your choice of chicken breast or sweetbread and chorizo or blood sausage",
+      "price": "54.99",
+      "image": "mixgrillx2.jpg"
+    },
+    {
+      "name": "Migas Meat Sample for Three",
+      "description": "4 of our best cuts, New York Steak, Short Ribs, Picanha and Flank Steak",
+      "price": "99.99",
+      "image": "mixgrillx3.jpg"
+    },
+    {
+      "name": "Mediterranean Sample for Four",
+      "description": "Taste all of our specialties on a wooden plate, includes Shrimp, Pork Chop, Sausage, Picanha, New York Strip, and Short Ribs",
+      "price": "134.99",
+      "image": "mixgrillx4.jpg"
+    },
+    {
+      "name": "Mediterranean Sample for Six",
+      "description": "For larger groups, house recommended. Shrimp, Pork Chops, Sausages, Picanhas, New York and Short Ribs. All aside of our house wine",
+      "price": "189.99",
+      "image": "asadodetiras.jpg"
+    }
+  ],
+  "sandwiches": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "burgers": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "pastas": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "sides": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "seafood": [
+    {
+      "name": "White Fish & Shrimp",
+      "description": "Grilled Swai Fish, topped with garlic shrimp and menier sauce",
+      "price": "22.99",
+      "image": "fish&shrimp.jpg"
+    }
+  ],
+  "juices": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "beers": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "butchery": {
+    "steaks": [
+      {
+        "name": "Flank Steak",
+        "description": "",
+        "price": "14.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Skirt Steak",
+        "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Ribeye Steak",
+        "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Chinchulin/Small Intestines",
+        "description": "",
+        "price": "8.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Molleja/Sweetbread",
+        "description": "",
+        "price": "8.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Short Ribs",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Argentinian Sausage/Chorizo",
+        "description": "",
+        "price": "8.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Blood Sausage/Morcilla",
+        "description": "",
+        "price": "8.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Pork Matambre",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Provolone Cheese",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Baby-back Ribs",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "Picanha Steak",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      },
+      {
+        "name": "New York Strip",
+        "description": "",
+        "price": "22.99",
+        "image": "fruitwaffles.jpg"
+      }
+    ]
+  },
+  "bakery": [
+    {
+      "name": "Variety",
+      "description": "All of our desserts in one image",
+      "price": "",
+      "image": "desserts.jpg"
+    },
+    {
+      "name": "Milhojas",
+      "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
+      "price": "8.99",
+      "image": "milhojas.jpg"
+    }
+  ],
+  "extras": [{ "name": "", "description": "", "price": "", "image": "" }],
+  "promotions": [
+    {
+      "name": "Everyday Brunch",
+      "description": "From 10:30 AM until 2:30 PM, Mimosa and House Dessert included",
+      "price": "16-20",
+      "video": "brunchs.mov"
+    },
+    {
+      "name": "Thursdays",
+      "description": "On thursdays, our Mix Grill x 2, includes a pitcher of sangria",
+      "price": "53.99",
+      "image": "mixgrillx2.jpg"
+    },
+    {
+      "name": "Fridays & Saturdays",
+      "description": "Our Migas Meat Sample x 3, includes a pitcher of sangria or house wine",
+      "price": "100",
+      "image": "mixgrillx3.jpg"
+    },
+    {
+      "name": "Special Lunch",
+      "description": "Monday thru Friday, Picanha, Chicken Breast or Pork Chop, 1 side, 1 salad and a soup",
+      "price": "14.99",
+      "image": "shortribs.jpg"
+    }
+  ]
+}
