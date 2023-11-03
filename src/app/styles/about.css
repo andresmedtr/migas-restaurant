@@ -1,0 +1,36 @@
+.title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.titleDescription {
+  padding-top: 1rem;
+}
+
+.scrollContainer {
+  justify-content: start;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.frontImg {
+  margin-right: 2rem;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.borderBottom {
+  border-bottom: 4px solid#b48303;
+}
+
+@media screen and (max-width: 768px) {
+  .pAbout {
+    font-size: 1rem;
+  }
+  .video {
+    width: 150%;
+  }
+}
