@@ -33,17 +33,18 @@ const PromotionsCarousel = ({ slide }) => {
                 <h2 className="mt-lg-5">{item.name}</h2>
                 {/* DISPLAYING IMAGE OR VIDEO ON DAILY SPECIALS SECTION */}
                 {!item.image ? (
-                  <video
-                    className="w-50 rounded-4 "
-                    loop
-                    muted
-                    playsInline
-                    controls
-                    playbackrate={1.5}
-                    autoPlay={true}>
-                    <source src={require(`../../assets/${item.video}`)} />
-                  </video>
+                  <h1>TEST</h1>
                 ) : (
+                  // <video
+                  //   className="w-50 rounded-4 "
+                  //   loop
+                  //   muted
+                  //   playsInline
+                  //   controls
+                  //   playbackrate={1.5}
+                  //   autoPlay={true}>
+                  //   <source src={require(`../../assets/${item.video}`)} />
+                  // </video>
                   <div className="rounded-4 w-50 mx-auto bg bg-dark text-center">
                     <img
                       src={require(`../../assets/${item.image}`)}

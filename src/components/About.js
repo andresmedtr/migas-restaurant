@@ -45,11 +45,6 @@ const About = () => {
             </p>
           </div>
         </div>
-        {/* <div className="row mx-auto">
-          <div className="col-12 text-center">
-            <h1 className="">OUR STAFF</h1>
-          </div>
-        </div> */}
       </motion.div>
       <Frame />
     </div>

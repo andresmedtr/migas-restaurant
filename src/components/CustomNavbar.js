@@ -14,7 +14,9 @@ const CustomNavbar = () => {
   };
 
   const handleToggle = () => {
-    document.querySelector(".navbarItems").classList.remove("show");
+    // if (typeof document !== "undefined") {
+    //   document.querySelector(".navbarItems").classList.remove("show");
+    // }
   };
 
   return (

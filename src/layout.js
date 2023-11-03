@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CustomNavbar from "./components/CustomNavbar";
@@ -10,7 +12,7 @@ import "./styles/index.css";
 
 const basename = process.env.BASENAME || "";
 
-function Layout() {
+export default function Layout() {
   return (
     <div className="App">
       <BrowserRouter basename={basename}>
@@ -26,5 +28,3 @@ function Layout() {
     </div>
   );
 }
-
-export default Layout;

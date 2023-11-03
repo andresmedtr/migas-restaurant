@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+// , useRef, useEffect
 import { Carousel } from "react-bootstrap";
 import "../styles/carousel.css";
-import Migas from "../assets/VIDEO_MIGAS.mov";
+// import Migas from "../assets/argentinianbf.jpg";
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,10 +10,10 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import OrdersModal from "./OrdersModal";
 
 const CarouselPage = () => {
-  const videoRef = useRef();
-  useEffect(() => {
-    videoRef.current.play();
-  }, []);
+  // const videoRef = useRef();
+  // useEffect(() => {
+  //   videoRef.current.play();
+  // }, []);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -82,7 +83,7 @@ const CarouselPage = () => {
       <Carousel interval={2000} style={{ width: "100%" }}>
         <Carousel.Item>
           <div className="sliderContainer">
-            <video
+            {/* <video
               className="video w-100 m-auto"
               loop
               muted
@@ -91,7 +92,7 @@ const CarouselPage = () => {
               autoPlay={true}
               playsInline>
               <source src={Migas} />
-            </video>
+            </video> */}
           </div>
         </Carousel.Item>
       </Carousel>
