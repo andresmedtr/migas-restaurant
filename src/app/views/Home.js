@@ -7,7 +7,6 @@ import PopularPlates from "../components/Specialties/PopularPlates";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Promotions from "../components/Promotions/Promotions";
-import Layout from "../layout";
 
 const Home = () => {
   useEffect(() => {
@@ -20,12 +19,12 @@ const Home = () => {
   }, []);
 
   return (
-    <Layout>
+    <div>
       <Carousel />
       <About />
       <Promotions />
       <PopularPlates />
-    </Layout>
+    </div>
   );
 };
 
