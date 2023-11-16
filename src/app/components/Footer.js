@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "@/styles/footer.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";

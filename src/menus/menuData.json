@@ -47,6 +47,18 @@
       "description": "12oz New York Steak topped with two eggs and noisette potatoes.",
       "price": "29.99",
       "image": "nybrunch.jpg"
+    },
+    {
+      "name": "Fruit Bowl",
+      "description": "Mixed fruits bowl.",
+      "price": "9.99",
+      "image": "mixedfruits.jpg"
+    },
+    {
+      "name": "Smoked Salmon & Cream Cheese Bruschetta",
+      "description": "Delicious sliced french baguette, with cream cheese & smoked salmon.",
+      "price": "18.99",
+      "image": "creamcheesesalmon.jpg"
     }
   ],
   "appetizer": [

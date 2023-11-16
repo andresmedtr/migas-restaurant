@@ -3,12 +3,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import "../../styles/carousel.css";
-// import Migas from "../../assets/VIDEO_MIGAS.mov";
 import { motion } from "framer-motion";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import OrdersModal from "./OrdersModal";
-import Video from "next-video";
 
 const CarouselPage = () => {
   const videoRef = useRef();

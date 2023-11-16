@@ -1,6 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import CustomNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/index.css";
 
 export const metadata = {
@@ -13,8 +13,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon.ico"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link
+          rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=El+Messiri&family=Kanit:wght@300&family=Poppins:wght@300&display=swap"
-          rel="stylesheet"></link>
+        />
       </head>
       <body>
         <CustomNavbar />
