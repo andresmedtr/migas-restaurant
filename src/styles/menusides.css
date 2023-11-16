@@ -1,12 +1,24 @@
 .fixedButton {
   position: fixed;
-  top: 20%;
-  right: 50%;
+  top: 10%;
+  right: 10%;
+  width: 10%;
+}
+
+.fixedButton h3 {
+  font-size: 1rem;
+}
+
+.fixedButton h3:hover {
+  border: 2px solid #b38203;
+  background-color: #b38203;
+  scale: 1.1;
 }
 
 .sides-container {
-  left: 0%;
-  width: 30%;
+  top: 10%;
+  right: 10%;
+  width: 100%;
 }
 
 .closeButton {
@@ -18,8 +30,9 @@
   cursor: pointer;
 }
 
-.sides-image {
-  width: 20%;
+.sidesImage {
+  position: fixed;
+  right: 1%;
 }
 
 .menuImagesContainer {
@@ -27,6 +40,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .sidesButton {
+    width: 10%;
+  }
+
   .sides-container {
     width: 30%;
   }

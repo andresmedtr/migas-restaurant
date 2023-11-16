@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import About from "./components/About";
 import Carousel from "./components/Carousel";
+import Promotions from "./components/Promotions/Promotions";
+import PopularPlates from "./components/Specialties/PopularPlates";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Frame from "./components/Frame";
@@ -22,6 +24,8 @@ const Home = () => {
       <Carousel />
       <About />
       <Frame />
+      <Promotions />
+      <PopularPlates />
     </div>
   );
 };

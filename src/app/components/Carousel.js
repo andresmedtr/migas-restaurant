@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import "../../styles/carousel.css";
 // import Migas from "../../assets/VIDEO_MIGAS.mov";
@@ -12,10 +12,10 @@ import OrdersModal from "./OrdersModal";
 // const video = FileLoader.default(require(Migas));
 
 const CarouselPage = () => {
-  //   const videoRef = useRef();
-  //   useEffect(() => {
-  //     videoRef.current.play();
-  //   }, []);
+  const videoRef = useRef();
+  useEffect(() => {
+    videoRef.current.play();
+  }, []);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -81,8 +81,7 @@ const CarouselPage = () => {
       <Carousel interval={2000} style={{ width: "100%" }}>
         <Carousel.Item>
           <div className="sliderContainer">
-            <img src="../../assets/doordash.jpg" />
-            {/* <video
+            <video
               className="video w-100 m-auto"
               loop
               muted
@@ -90,8 +89,8 @@ const CarouselPage = () => {
               ref={videoRef}
               autoPlay={true}
               playsInline>
-              <source src={Migas} />
-            </video> */}
+              <source src={`../../assets/VIDEO_MIGAS.mov`} />
+            </video>
           </div>
         </Carousel.Item>
       </Carousel>
