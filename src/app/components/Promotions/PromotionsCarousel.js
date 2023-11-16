@@ -41,7 +41,7 @@ const PromotionsCarousel = ({ slide }) => {
                     controls
                     playbackrate={1.5}
                     autoPlay={true}>
-                    <source src={`../../assets/${item.video}`} />
+                    <source src={`/assets/${item.video}`} />
                   </video>
                 ) : (
                   <div className="rounded-4 w-50 mx-auto bg bg-dark text-center">

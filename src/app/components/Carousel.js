@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import OrdersModal from "./OrdersModal";
-
-// const video = FileLoader.default(require(Migas));
+import Video from "next-video";
 
 const CarouselPage = () => {
   const videoRef = useRef();
@@ -89,7 +88,7 @@ const CarouselPage = () => {
               ref={videoRef}
               autoPlay={true}
               playsInline>
-              <source src={`../../assets/VIDEO_MIGAS.mov`} />
+              <source src={`/assets/VIDEO_MIGAS.mp4`} />
             </video>
           </div>
         </Carousel.Item>
