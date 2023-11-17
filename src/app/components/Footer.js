@@ -48,8 +48,9 @@ const Footer = () => {
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8">
             <p>
-              Here at Miga's, we take honor in our beliefs, that's why we tried
-              to make our best to show you all of this Restaurant's quality.
+              Here at Miga&apos;s, we take honor in our beliefs, that&apos;s why
+              we tried to make our best to show you all of this
+              Restaurant&apos;s quality.
             </p>
             <p>
               Reservations{" "}

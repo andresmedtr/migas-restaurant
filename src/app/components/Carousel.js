@@ -57,7 +57,7 @@ const CarouselPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 1.5 }}
         className="carouselHeading">
-        Miga's Steakhouse
+        Miga&apos;s Steakhouse
         <div style={{ display: "flex" }}>
           <p className="border-bottom border-2" style={{ width: "45%" }}></p>
           <span className="icon"></span>
