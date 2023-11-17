@@ -68,7 +68,7 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1"
                 rel="noreferrer">
                 <img
-                  src="/assets/ubereats.jpg"
+                  src="/assets/postmates-logo.jpg"
                   className="w-25 rounded col"
                   alt="Postmates"
                 />
