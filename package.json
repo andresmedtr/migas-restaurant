@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -24,7 +27,6 @@
     "hls.js": "^1.4.12",
     "next": "14.0.1",
     "next-video": "^0.9.1",
-    "node": "^21.1.0",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
@@ -36,12 +38,10 @@
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
     "file-loader": "^6.2.0",
     "framer-motion": "^10.16.4",
-    "install": "^0.13.0",
     "npm": "^10.2.3",
     "react-bootstrap": "^2.9.1"
   }
