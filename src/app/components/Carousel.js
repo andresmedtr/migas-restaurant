@@ -35,6 +35,7 @@ const CarouselPage = () => {
       <motion.div
         className="orderNow border-2 border-warning border-bottom border-top"
         initial={{ y: -50 }}
+        type="button"
         animate={{ y: 0 }}
         transition={{
           type: "spring",

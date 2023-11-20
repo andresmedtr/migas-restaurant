@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "@/styles/promotions.css";
+import Image from "next/image";
 
 const PromotionsCarousel = ({ slide }) => {
   const [itemIdx, setItemIdx] = useState(0);
@@ -45,8 +46,10 @@ const PromotionsCarousel = ({ slide }) => {
                   </video>
                 ) : (
                   <div className="rounded-4 w-50 mx-auto bg bg-dark text-center">
-                    <img
-                      src={`../../assets/${item.image}`}
+                    <Image
+                      width={100}
+                      height={100}
+                      src={`/assets/${item.image}`}
                       style={{ opacity: "0.6", height: "auto" }}
                       alt={`${index + 1} ${item.name}`}
                       className="w-100 mx-auto rounded-4"

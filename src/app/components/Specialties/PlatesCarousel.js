@@ -2,6 +2,7 @@ import menuData from "@/menus/menuData.json";
 import { Carousel } from "react-bootstrap";
 import "@/styles/popularplates.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const PlatesCarousel = () => {
   return (
@@ -20,9 +21,11 @@ const PlatesCarousel = () => {
             }}>
             {menuData.breakfast.map((item, index) => (
               <Carousel.Item key={index}>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   className="fixedImage rounded-3"
-                  src={`../../assets/${item.image}`}
+                  src={`/assets/${item.image}`}
                   style={{ opacity: "0.7" }}
                   alt={`${index + 1} Slide`}
                 />
@@ -49,9 +52,11 @@ const PlatesCarousel = () => {
             }}>
             {menuData.mixGrills.map((item, index) => (
               <Carousel.Item key={index}>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   className="fixedImage rounded-3"
-                  src={`../../assets/${item.image}`}
+                  src={`/assets/${item.image}`}
                   style={{ opacity: "0.7" }}
                   alt={`${index + 1} Slide`}
                 />
@@ -79,9 +84,11 @@ const PlatesCarousel = () => {
             }}>
             {menuData.entrees.map((item, index) => (
               <Carousel.Item key={index}>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   className="fixedImage rounded-3"
-                  src={`../../assets/${item.image}`}
+                  src={`/assets/${item.image}`}
                   style={{ opacity: "0.5" }}
                   alt={`${index} Slide`}
                 />
@@ -109,9 +116,11 @@ const PlatesCarousel = () => {
             }}>
             {menuData.bakery.map((item, index) => (
               <Carousel.Item key={index}>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   className="fixedImage rounded-3"
-                  src={`../../assets/${item.image}`}
+                  src={`/assets/${item.image}`}
                   style={{ opacity: "0.7" }}
                   alt={`${index} Slide`}
                 />
@@ -139,9 +148,11 @@ const PlatesCarousel = () => {
             }}>
             {menuData.butchery.steaks.map((item, index) => (
               <Carousel.Item key={index}>
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   className="fixedImage rounded-3"
-                  src={`../../assets/${item.image}`}
+                  src={`/assets/${item.image}`}
                   style={{ opacity: "0.7" }}
                   alt={`${index} Slide`}
                 />
