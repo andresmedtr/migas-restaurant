@@ -179,79 +179,79 @@
         "name": "Flank Steak",
         "description": "",
         "price": "14.99",
-        "image": "fruitwaffles.jpg"
+        "image": "flanksteak.jpg"
       },
       {
         "name": "Skirt Steak",
         "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "outsideskirt.jpg"
       },
       {
         "name": "Ribeye Steak",
         "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "ribeye.jpg"
       },
       {
         "name": "Chinchulin/Small Intestines",
         "description": "",
         "price": "8.99",
-        "image": "fruitwaffles.jpg"
+        "image": "chinchulines.jpg"
       },
       {
         "name": "Molleja/Sweetbread",
         "description": "",
         "price": "8.99",
-        "image": "fruitwaffles.jpg"
+        "image": "mollejas.jpg"
       },
       {
         "name": "Short Ribs",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "shortribs.jpg"
       },
       {
         "name": "Argentinian Sausage/Chorizo",
         "description": "",
         "price": "8.99",
-        "image": "fruitwaffles.jpg"
+        "image": "chorizo.jpg"
       },
       {
         "name": "Blood Sausage/Morcilla",
         "description": "",
         "price": "8.99",
-        "image": "fruitwaffles.jpg"
+        "image": "morcilla.jpg"
       },
       {
         "name": "Pork Matambre",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "matambre.jpg"
       },
       {
         "name": "Provolone Cheese",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "provoletta.jpg"
       },
       {
         "name": "Baby-back Ribs",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "porkribs.jpg"
       },
       {
         "name": "Picanha Steak",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "picanha.jpg"
       },
       {
         "name": "New York Strip",
         "description": "",
         "price": "22.99",
-        "image": "fruitwaffles.jpg"
+        "image": "newyorksteak.jpg"
       }
     ]
   },
@@ -293,7 +293,7 @@
       "name": "Special Lunch",
       "description": "Monday thru Friday, Picanha, Chicken Breast or Pork Chop, 1 side, 1 salad and a soup",
       "price": "14.99",
-      "image": "shortribs.jpg"
+      "image": "specialLunch.jpg"
     }
   ]
 }

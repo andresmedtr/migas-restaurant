@@ -152,7 +152,7 @@ const PlatesCarousel = () => {
                   width={100}
                   height={100}
                   className="fixedImage rounded-3"
-                  src={`/assets/${item.image}`}
+                  src={`/assets/butchery/${item.image}`}
                   style={{ opacity: "0.7" }}
                   alt={`${index} Slide`}
                 />

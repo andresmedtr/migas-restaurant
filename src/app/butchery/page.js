@@ -35,17 +35,17 @@ const Butchery = () => {
                 animate={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 1 }}
                 key={index}
-                className="card col-md-3  col-sm-6 ps-4 m-2 position-relative butcheryItem mx-auto">
+                className="card col-xl-3 col-lg-4 col-md-6 col-sm-12 ps-4 m-2 position-relative butcheryItem mx-auto">
                 <div className="butcheryImage">
                   <Image
-                    width={100}
-                    height={250}
+                    width={200}
+                    height={300}
                     onMouseEnter={() => {
                       setCurrentSelection(item.name);
                     }}
                     className="card-img-top mt-2"
-                    src={`/assets/${item.image}`}
-                    alt={`${currentSelection} ${index + 1}`}
+                    src={`/assets/butchery/${item.image}`}
+                    alt={`${item.name} ${index + 1}`}
                   />
                 </div>
                 <div className="card-body itemDescription">
