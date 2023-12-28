@@ -10,9 +10,10 @@ const Butchery = () => {
   const [currentSelection, setCurrentSelection] = useState("");
 
   return (
-    <div className="pt-5 w-100 mx-auto">
+    <div className="pt-5 w-100 heightSetting">
       <motion.h1
-        className="borderBottom text-center pt-5 w-25 mx-auto butcheryH1"
+        className="borderBottom text-center pt-5 w-75 mx-auto"
+        style={{ fontSize: "3rem" }}
         initial={{ opacity: 0, x: 0, y: -50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1 }}>

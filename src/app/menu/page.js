@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import menuData from "../../../public/assets/menu/menuImg.json";
 import MenuSides from "../components/MenuSides";
 import Image from "next/image";
