@@ -133,37 +133,40 @@ const PlatesCarousel = () => {
           </Carousel>
         </div>
       </div>
+
       <div className="w-lg-75 mx-auto mt-3" data-aos="fade-down">
         <div className="col-lg-12">
           <h2 className="text-center bordersBottom mx-auto w-50">BUTCHERY</h2>
         </div>
-        <div
-          className="d-flex justify-content-center align-items-center h-100"
-          data-aos="fade-down">
-          <Carousel
-            className="carouselShow bg-dark rounded-3"
-            style={{
-              width: "50%",
-              height: "auto",
-            }}>
-            {menuData.butchery.steaks.map((item, index) => (
-              <Carousel.Item key={index}>
-                <Image
-                  width={100}
-                  height={100}
-                  className="fixedImage rounded-3"
-                  src={`/assets/butchery/${item.image}`}
-                  style={{ opacity: "0.7" }}
-                  alt={`${index} Slide`}
-                />
-                <Carousel.Caption className="itemDescription">
-                  <h5 className="textCarousel">{item.name}</h5>
-                  <p className="textCarousel">{item.description}</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
+        <Link href="/butchery">
+          <div
+            className="d-flex justify-content-center align-items-center h-100"
+            data-aos="fade-down">
+            <Carousel
+              className="carouselShow bg-dark rounded-3"
+              style={{
+                width: "50%",
+                height: "auto",
+              }}>
+              {menuData.butchery.steaks.map((item, index) => (
+                <Carousel.Item key={index}>
+                  <Image
+                    width={100}
+                    height={100}
+                    className="fixedImage rounded-3"
+                    src={`/assets/butchery/${item.image}`}
+                    style={{ opacity: "0.7" }}
+                    alt={`${index} Slide`}
+                  />
+                  <Carousel.Caption className="itemDescription">
+                    <h5 className="textCarousel">{item.name}</h5>
+                    <p className="textCarousel">{item.description}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
+        </Link>
       </div>
 
       <div className="d-flex justify-content-center pt-5">
