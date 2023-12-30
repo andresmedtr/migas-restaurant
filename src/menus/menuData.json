@@ -66,15 +66,63 @@
       "name": "Provoletta",
       "description": "Melted provolone cheese with spices",
       "price": "7.99",
-      "image": ""
+      "image": "provoletta.jpg"
+    },
+
+    {
+      "name": "Fried Calamari",
+      "description": "Bread Calamari Rings",
+      "image": "friedcalamari.jpg"
+    },
+    {
+      "name": "Sausage Mix",
+      "description": "Mix&Match Chorizo and Morcilla",
+      "image": "chorimorci.jpg"
+    },
+    {
+      "name": "Garlic Shrimp",
+      "description": "Garlic-Sauteed Shrimp",
+      "image": "garlicshrimp.jpg"
+    },
+    {
+      "name": "Loin Carpaccio",
+      "description": "Fresh meat carpaccio & house vinagrette",
+      "image": "meatcarpaccio.jpg"
+    },
+    {
+      "name": "Smoked Salmon Carpaccio",
+      "description": "Delicious Smoked Salmon Carpaccio",
+      "image": "smokedsalmoncarpaccio.jpg"
+    },
+    {
+      "name": "Molleja/Sweetbread",
+      "description": "Crispy mollejas",
+      "image": "mollejasappetizer.jpg"
+    },
+    {
+      "name": "Homemade Soup",
+      "description": "Choose your favorite and enjoy",
+      "image": "soup.jpg"
     }
   ],
   "entrees": [
+    {
+      "name": "Loin Cartoccio",
+      "description": "Fillet mignon wrapped with bacon, served on a delicious creamy mushroom risotto",
+      "price": "44.99",
+      "image": "loincartoccio.jpg"
+    },
     {
       "name": "Meat Skewer",
       "description": "8oz Flank steak pieces with grilled vegetables",
       "price": "29.99",
       "image": "nybrunch.jpg"
+    },
+    {
+      "name": "New York Strip",
+      "description": "14oz New York Steak",
+      "price": "29.99",
+      "image": "newyork.jpg"
     },
     {
       "name": "Short Ribs",
@@ -83,16 +131,22 @@
       "image": "shortribs.jpg"
     },
     {
-      "name": "Skirt Steak",
-      "description": "6oz/12oz  Churrasco steak",
+      "name": "Flank Steak",
+      "description": "6oz or 12oz  Flank steak",
       "price": "29.99",
-      "image": "nybrunch.jpg"
+      "image": "flanksteak.jpg"
     },
     {
       "name": "Ribeye Steak",
       "description": "Juicy 14oz steak, topped with garlic butter and rosemary",
       "price": "34.99",
-      "image": "nybrunch.jpg"
+      "image": "ribeye.jpg"
+    },
+    {
+      "name": "Grilled T-Bone",
+      "description": "Grilled T-Bone Steak, marinated in red wine and served on a bed of mushroom risotto",
+      "price": "44.99",
+      "image": "tbonerisotto.jpg"
     },
     {
       "name": "Meat Skewer",
@@ -105,6 +159,30 @@
       "description": "Grilled Swai Fish, topped with garlic shrimp and menier sauce",
       "price": "22.99",
       "image": "fish&shrimp.jpg"
+    },
+    {
+      "name": "Mix Grill For Two",
+      "description": "A variety of meats, including flank steak, short ribs, and your choice of chicken breast or sweetbread and chorizo or blood sausage",
+      "price": "54.99",
+      "image": "mixgrillx2.jpg"
+    },
+    {
+      "name": "Migas Meat Sample for Three",
+      "description": "4 of our best cuts, New York Steak, Short Ribs, Picanha and Flank Steak",
+      "price": "99.99",
+      "image": "mixgrillx3.jpg"
+    },
+    {
+      "name": "Mediterranean Sample for Four",
+      "description": "Taste all of our specialties on a wooden plate, includes Shrimp, Pork Chop, Sausage, Picanha, New York Strip, and Short Ribs",
+      "price": "134.99",
+      "image": "mixgrillx4.jpg"
+    },
+    {
+      "name": "Mediterranean Sample for Six",
+      "description": "For larger groups, house recommended. Shrimp, Pork Chops, Sausages, Picanhas, New York and Short Ribs. All aside of our house wine",
+      "price": "189.99",
+      "image": "asadodetiras.jpg"
     }
   ],
   "specialties": [
@@ -123,12 +201,6 @@
     {
       "name": "Salmon Cartoccio",
       "description": "Grilled Salmon, served on top of a delicious creamy mushroom cartoccio",
-      "price": "44.99",
-      "image": ""
-    },
-    {
-      "name": "Grilled T-Bone",
-      "description": "Grilled T-Bone Steak, marinated in red wine and served on a bed of mushroom risotto",
       "price": "44.99",
       "image": ""
     }

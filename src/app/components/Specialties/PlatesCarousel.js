@@ -12,13 +12,9 @@ const PlatesCarousel = () => {
           <h2 className="bordersBottom mx-auto w-50">BREAKFAST</h2>
         </div>
         <div
-          className="d-flex justify-content-center align-items-center h-100"
+          className="d-flex justify-content-center align-items-center"
           data-aos="fade-up">
-          <Carousel
-            className="carouselShow bg bg-dark rounded-3"
-            style={{
-              width: "80%",
-            }}>
+          <Carousel className="bg-dark rounded-3 w-75">
             {menuData.breakfast.map((item, index) => (
               <Carousel.Item key={index}>
                 <Image
@@ -40,17 +36,13 @@ const PlatesCarousel = () => {
       </div>
       <div className="col-lg-4 mt-5 mb-lg-5">
         <div className="text-center">
-          <h2 className="bordersBottom mx-auto w-50">MIX GRILLS</h2>
+          <h2 className="bordersBottom mx-auto w-50">APPETIZER</h2>
         </div>
         <div
-          className="d-flex justify-content-center align-items-center h-100"
+          className="d-flex justify-content-center align-items-center"
           data-aos="fade-down">
-          <Carousel
-            className="carouselShow bg-dark rounded-3"
-            style={{
-              width: "80%",
-            }}>
-            {menuData.mixGrills.map((item, index) => (
+          <Carousel className="bg-dark rounded-3 w-75">
+            {menuData.appetizer.map((item, index) => (
               <Carousel.Item key={index}>
                 <Image
                   width={100}
@@ -74,14 +66,9 @@ const PlatesCarousel = () => {
           <h2 className="bordersBottom mx-auto w-50">ENTREES</h2>
         </div>
         <div
-          className="d-flex justify-content-center align-items-center h-100"
+          className="d-flex justify-content-center align-items-center"
           data-aos="fade-up">
-          <Carousel
-            className="carouselShow rounded-3 bg-dark"
-            style={{
-              width: "80%",
-              height: "auto",
-            }}>
+          <Carousel className="rounded-3 bg-dark w-75">
             {menuData.entrees.map((item, index) => (
               <Carousel.Item key={index}>
                 <Image
@@ -101,19 +88,12 @@ const PlatesCarousel = () => {
           </Carousel>
         </div>
       </div>
-      <div className="w-lg-75 mx-auto mb-5 mt-5" data-aos="fade-down">
+      <div className="mx-auto mb-5 mt-2" data-aos="fade-down">
         <div className="col-lg-12">
           <h2 className="text-center bordersBottom mx-auto w-50">DESSERTS</h2>
         </div>
-        <div
-          className="d-flex justify-content-center align-items-center h-100"
-          data-aos="fade-up">
-          <Carousel
-            className="carouselShow bg-dark rounded-3"
-            style={{
-              width: "50%",
-              height: "auto",
-            }}>
+        <div className="mx-auto lowerCarousels" data-aos="fade-up">
+          <Carousel className="bg-dark rounded-3 ">
             {menuData.bakery.map((item, index) => (
               <Carousel.Item key={index}>
                 <Image
@@ -134,20 +114,13 @@ const PlatesCarousel = () => {
         </div>
       </div>
 
-      <div className="w-lg-75 mx-auto mt-3" data-aos="fade-down">
+      <div className="mx-auto mt-3" data-aos="fade-down">
         <div className="col-lg-12">
           <h2 className="text-center bordersBottom mx-auto w-50">BUTCHERY</h2>
         </div>
         <Link href="/butchery">
-          <div
-            className="d-flex justify-content-center align-items-center h-100"
-            data-aos="fade-down">
-            <Carousel
-              className="carouselShow bg-dark rounded-3"
-              style={{
-                width: "50%",
-                height: "auto",
-              }}>
+          <div className="mx-auto lowerCarousels" data-aos="fade-down">
+            <Carousel className=" bg-dark rounded-3">
               {menuData.butchery.steaks.map((item, index) => (
                 <Carousel.Item key={index}>
                   <Image

@@ -6,7 +6,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
+.lowerCarousels {
+  width: 50%;
+}
 .fixedImage {
   width: 100%;
   height: 300px;
@@ -27,6 +29,15 @@
     width: 100%;
     height: 100px;
     object-fit: cover;
+  }
+
+  .carousel-inner,
+  .carousel-inner img {
+    height: 200px;
+  }
+
+  .lowerCarousels {
+    width: 75%;
   }
 
   .carousel-caption {
