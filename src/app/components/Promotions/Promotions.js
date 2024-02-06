@@ -1,5 +1,3 @@
-"use client";
-
 import PromotionsCarousel from "./PromotionsCarousel";
 import menuData from "@/menus/menuData.json";
 

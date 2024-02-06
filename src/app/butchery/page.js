@@ -38,12 +38,13 @@ const Butchery = () => {
                 className="card col-xl-3 col-lg-4 col-md-6 col-sm-12 ps-4 m-2 position-relative butcheryItem mx-auto">
                 <div className="butcheryImage">
                   <Image
-                    width={200}
+                    width={250}
                     height={300}
+                    priority
                     onMouseEnter={() => {
                       setCurrentSelection(item.name);
                     }}
-                    className="card-img-top mt-2"
+                    className="card-img-top mt-2 w-100 h-auto"
                     src={`/assets/butchery/${item.image}`}
                     alt={`${item.name} ${index + 1}`}
                   />
