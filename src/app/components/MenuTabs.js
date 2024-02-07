@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
 
 const MenuTabs = () => {
   const menuSectionsArray = [
     "Breakfasts",
     "Appetizer",
     "Entrees",
-    "Pasta/Burgers",
+    "Pasta&Breads",
     "Drinks",
   ];
 
@@ -13,30 +14,37 @@ const MenuTabs = () => {
   const [currentItem, setCurrentItem] = useState(
     "https://www.canva.com/design/DAF8ELJBBOQ/view" // Default URL
   );
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
-  const renderSelectedPdf = (clickedSection) => {
-    switch (clickedSection) {
-      case "Breakfasts":
-        setCurrentItem("https://www.canva.com/design/DAF8EPSjOTk/view?embed");
-        break;
-      case "Appetizer":
-        setCurrentItem("https://www.canva.com/design/DAF8ELJBBOQ/view");
-        break;
-      case "Entrees":
-      case "Pasta/Burgers":
-      case "Drinks":
-        setCurrentItem("");
-        break;
-      default:
-        setCurrentItem("https://www.canva.com/design/DAF8ELJBBOQ/view");
-        break;
-    }
-  };
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  // const renderSelectedPdf = (clickedSection) => {
+  //   switch (clickedSection) {
+  //     case "Breakfasts":
+  //       setCurrentItem("https://www.canva.com/design/DAF8EPSjOTk/view?embed");
+  //       break;
+  //     case "Appetizer":
+  //       setCurrentItem("https://www.canva.com/design/DAF8ELJBBOQ/view");
+  //       break;
+  //     case "Entrees":
+  //     case "Pasta/Burgers":
+  //     case "Drinks":
+  //       setCurrentItem("");
+  //       break;
+  //     default:
+  //       setCurrentItem("https://www.canva.com/design/DAF8ELJBBOQ/view");
+  //       break;
+  //   }
+  // };
 
   const handleClick = (item) => {
     setClickedSection(item);
-    renderSelectedPdf(item);
+    // renderSelectedPdf(item);
   };
+  pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
   return (
     <div>
@@ -63,21 +71,31 @@ const MenuTabs = () => {
         {menuSectionsArray.map((item, index) => (
           <div
             key={index}
-            className={`tab-pane fade ${
+            className={`tab-pane fade w-100 mx-auto ${
               clickedSection === item ? "show active" : ""
             }`}
             id={`nav-${item.toLowerCase()}`}
             role="tabpanel"
             aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
-            {clickedSection === item && currentItem && (
+            {clickedSection === item && (
               <div className="menuPdf">
-                <iframe
+                <object
+                  data={`/assets/menus/${item.toLowerCase()}.pdf`}
+                  type="application/pdf"
+                  className="menuFrame"
+                />
+                {/* <Document
+                  file={`/assets/menus/${item.toLowerCase()}.pdf`}
+                  onLoadSuccess={onDocumentLoadSuccess}>
+                  <Page pageNumber={pageNumber} />
+                </Document> */}
+                {/* <iframe
                   loading="lazy"
                   className="menuFrame"
                   src="https://www.canva.com/design/DAF8EPSjOTk/view?embed"
                   allowFullScreen="allowfullscreen"
                   allow="fullscreen"
-                />
+                /> */}
               </div>
             )}
           </div>

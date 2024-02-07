@@ -23,6 +23,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=El+Messiri&family=Kanit:wght@300&family=Poppins:wght@300&display=swap"
         />
+        <link
+          href="https://unpkg.com/react-pdf/dist/react-pdf.css"
+          rel="stylesheet"
+          type="text/css"
+        />
       </head>
       <body>
         <CustomNavbar />
