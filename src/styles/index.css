@@ -29,6 +29,31 @@ body {
   border-radius: 10px;
 }
 
+.menuPdf {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 154.5455%;
+  padding-bottom: 0;
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+  margin-top: 1.6em;
+  margin-bottom: 0.9em;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+}
+
+.menuFrame {
+  position: absolute;
+  width: 45%;
+  height: 30%;
+  top: 0;
+  left: 20%;
+  border: none;
+  padding: 0;
+  margin: auto;
+}
+
 @media screen and (max-width: 768px) {
   body {
     background-image: url("../../public/assets/bgphoneview.jpg");
