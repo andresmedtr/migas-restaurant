@@ -30,7 +30,7 @@ const Frame = () => {
           title="virtual-visit"
           width="853"
           height="480"
-          src="https://my.matterport.com/show/?m=217HjqoQQZq"
+          src="https://my.matterport.com/show/?m=hyt1LxUGvDH"
           allowFullScreen={true}
           allow="xr-spatial-tracking"></iframe>{" "}
       </div>

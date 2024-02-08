@@ -6,7 +6,7 @@ const About = () => {
     <div id="aboutus">
       <motion.div
         data-aos="fade-down"
-        className="scrollContainer"
+        className="scrollContainer pt-4"
         style={{
           height: "auto",
           fontSize: "1.5rem",
@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <div className="contentContainer">
           <div className="p-4">
-            <p className="pAbout m-0 mb-5 ">
+            <p className="pAbout mb-5">
               Miga&apos;s Steakhouse has been synonymous with premium
               steaks—curated with meticulous care to honor the heritage of
               Argentinian grilling and innovation alike. Step into our culinary

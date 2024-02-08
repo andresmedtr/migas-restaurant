@@ -4,7 +4,16 @@
 }
 
 .titleDescription {
+  margin: auto;
+  width: 75%;
   padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.pAbout {
+  width: 75%;
+  margin: auto;
+  text-align: center;
 }
 
 .scrollContainer {
@@ -17,20 +26,13 @@
   margin-right: 2rem;
 }
 
-.video {
-  display: flex;
-  justify-content: center;
-}
-
-.borderBottom {
-  border-bottom: 4px solid#b48303;
-}
-
 @media screen and (max-width: 768px) {
-  .pAbout {
-    font-size: 1rem;
+  .titleDescription {
+    width: 100%;
   }
-  .video {
-    width: 150%;
+
+  .pAbout {
+    width: 100%;
+    font-size: 1rem;
   }
 }

@@ -15,11 +15,6 @@
   object-fit: cover;
 }
 
-.bordersBottom {
-  border-bottom: 2px solid #b48303;
-  border-radius: 10px;
-}
-
 .itemDescription p {
   font-size: 1rem; /* Default font size */
 }

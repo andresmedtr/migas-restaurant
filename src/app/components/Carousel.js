@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useRef, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import "../../styles/carousel.css";
@@ -23,7 +21,7 @@ const CarouselPage = () => {
 
   return (
     <div className="carouselContainer">
-      <p className="locationText">
+      <div className="d-flex mx-auto locationText">
         Located in the heart of Miramar, Florida
         <a
           href="https://www.google.com/maps/place/Miga's+Florida/@25.9793519,-80.3644991,17z/data=!3m1!4b1!4m6!3m5!1s0x88d9a475305c9a3d:0xc3fbeda0da46d66c!8m2!3d25.9793471!4d-80.3619242!16s%2Fg%2F12m8_5tgn?entry=ttu"
@@ -31,9 +29,10 @@ const CarouselPage = () => {
           rel="noreferrer">
           <FontAwesomeIcon className="locationIcon" icon={faLocationDot} />
         </a>
-      </p>
-      <motion.div
-        className="orderNow border-2 border-warning border-bottom border-top"
+      </div>
+
+      <motion.h2
+        className="orderNow border-light border-bottom"
         initial={{ y: -50 }}
         type="button"
         animate={{ y: 0 }}
@@ -45,7 +44,7 @@ const CarouselPage = () => {
         }}
         onClick={handleShow}>
         ORDER NOW
-      </motion.div>
+      </motion.h2>
       <motion.h2
         initial={{ opacity: 0, x: 0, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
@@ -60,9 +59,9 @@ const CarouselPage = () => {
         className="carouselHeading">
         Miga&apos;s Steakhouse
         <div style={{ display: "flex" }}>
-          <p className="border-bottom border-2" style={{ width: "45%" }}></p>
-          <span className="icon"></span>
-          <p style={{ width: "47%" }} className="border-bottom border-2"></p>
+          <p className="border-bottom border-2" style={{ width: "45%" }} />
+          <span className="icon" />
+          <p style={{ width: "47%" }} className="border-bottom border-2" />
         </div>
       </motion.h1>
       <motion.h2
@@ -73,24 +72,22 @@ const CarouselPage = () => {
         Since 2009
       </motion.h2>
       <motion.h5
-        className="orderBottomCorner btn btn-light btn-lg text-dark"
+        className="orderBottomCorner btn btn-light text-dark"
         onClick={handleShow}>
         ORDER NOW
       </motion.h5>
       <Carousel interval={2000} style={{ width: "100%" }}>
-        <Carousel.Item>
-          <div className="sliderContainer">
-            <video
-              className="video w-100 m-auto"
-              loop
-              muted
-              allowFullScreen={true}
-              ref={videoRef}
-              autoPlay={true}
-              playsInline>
-              <source src={`/assets/VIDEO_MIGAS.mp4`} />
-            </video>
-          </div>
+        <Carousel.Item className="sliderContainer">
+          <video
+            className="video w-100 m-auto"
+            loop
+            muted
+            allowFullScreen={true}
+            ref={videoRef}
+            autoPlay={true}
+            playsInline>
+            <source src={`/assets/VIDEO_MIGAS.mp4`} />
+          </video>
         </Carousel.Item>
       </Carousel>
       <OrdersModal show={showModal} handleShow={handleShow} />
