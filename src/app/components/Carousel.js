@@ -32,7 +32,7 @@ const CarouselPage = () => {
       </div>
 
       <motion.h2
-        className="orderNow border-2 border-warning border-bottom border-top"
+        className="orderNow border-light border-bottom"
         initial={{ y: -50 }}
         type="button"
         animate={{ y: 0 }}
@@ -72,24 +72,22 @@ const CarouselPage = () => {
         Since 2009
       </motion.h2>
       <motion.h5
-        className="orderBottomCorner btn btn-light btn-lg text-dark"
+        className="orderBottomCorner btn btn-light text-dark"
         onClick={handleShow}>
         ORDER NOW
       </motion.h5>
       <Carousel interval={2000} style={{ width: "100%" }}>
-        <Carousel.Item>
-          <div className="sliderContainer">
-            <video
-              className="video w-100 m-auto"
-              loop
-              muted
-              allowFullScreen={true}
-              ref={videoRef}
-              autoPlay={true}
-              playsInline>
-              <source src={`/assets/VIDEO_MIGAS.mp4`} />
-            </video>
-          </div>
+        <Carousel.Item className="sliderContainer">
+          <video
+            className="video w-100 m-auto"
+            loop
+            muted
+            allowFullScreen={true}
+            ref={videoRef}
+            autoPlay={true}
+            playsInline>
+            <source src={`/assets/VIDEO_MIGAS.mp4`} />
+          </video>
         </Carousel.Item>
       </Carousel>
       <OrdersModal show={showModal} handleShow={handleShow} />

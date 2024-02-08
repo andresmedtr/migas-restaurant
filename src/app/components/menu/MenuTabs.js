@@ -23,6 +23,12 @@ const MenuTabs = () => {
     setPageNumber(1);
   };
 
+  // Setting custom styles for the generated canvas
+  const customRendererStyles = (canvas) => {
+    canvas.style.width = "100%";
+    canvas.style.height = "auto";
+  };
+
   // GlobalWorker set up for react-pdf
   pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -72,11 +78,12 @@ const MenuTabs = () => {
               role="tabpanel"
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
-                <div className="w-75">
+                <div className="w-100 mx-auto">
                   <Document
                     file={`/assets/menus/${element.file}.pdf`}
-                    className={"w-25 mx-auto"}>
+                    className={"mx-auto row h-auto"}>
                     <Page
+                      className={"col-lg-4 p-0 bg-dark mx-auto"}
                       renderTextLayer={false}
                       renderAnnotationLayer={false}
                       pageNumber={pageNumber}

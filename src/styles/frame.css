@@ -3,10 +3,6 @@ iframe {
   height: 40rem;
 }
 
-.borderBottom {
-  border-bottom: 4px solid#b48303;
-}
-
 @media screen and (max-width: 768px) {
   iframe {
     width: 80%;

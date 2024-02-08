@@ -8,7 +8,7 @@ const PlatesCarousel = () => {
   return (
     <div className="row container-fluid mx-auto">
       <div className="col-lg-4 mt-5 mb-lg-5">
-        <h2 className="bordersBottom mx-auto w-50 text-center">BREAKFAST</h2>
+        <h2 className="mx-auto w-50 text-center">BREAKFAST</h2>
 
         <Carousel
           className="bg-dark rounded-3 w-100 d-flex justify-content-center align-items-center"
@@ -32,7 +32,7 @@ const PlatesCarousel = () => {
         </Carousel>
       </div>
       <div className="col-lg-4 mt-5 mb-lg-5">
-        <h2 className="bordersBottom mx-auto w-50 text-center">APPETIZER</h2>
+        <h2 className="mx-auto w-50 text-center">APPETIZER</h2>
         <Carousel
           className="bg-dark rounded-3 w-100 d-flex justify-content-center align-items-center"
           data-aos="fade-up">
@@ -55,7 +55,7 @@ const PlatesCarousel = () => {
         </Carousel>
       </div>
       <div className="col-lg-4 mt-5 mb-5">
-        <h2 className="bordersBottom mx-auto w-50 text-center">ENTREES</h2>
+        <h2 className="mx-auto w-50 text-center">ENTREES</h2>
         <Carousel
           className="bg-dark rounded-3 w-100 d-flex justify-content-center align-items-center"
           data-aos="fade-up">
@@ -79,7 +79,7 @@ const PlatesCarousel = () => {
       </div>
       <div className="mx-auto mb-5 mt-2" data-aos="fade-down">
         <div className="col-lg-12">
-          <h2 className="text-center bordersBottom mx-auto w-50">DESSERTS</h2>
+          <h2 className="text-center mx-auto w-50">DESSERTS</h2>
         </div>
         {/* <div className="mx-auto lowerCarousels" data-aos="fade-up">bg-dark rounded-3 w-100 d-flex justify-content-center align-items-center */}
         <Carousel
@@ -106,7 +106,7 @@ const PlatesCarousel = () => {
 
       <div className="mx-auto mt-3" data-aos="fade-down">
         <div className="col-lg-12">
-          <h2 className="text-center bordersBottom mx-auto w-50">BUTCHERY</h2>
+          <h2 className="text-center mx-auto w-50">BUTCHERY</h2>
         </div>
         <Link href="/butchery">
           <Carousel className=" bg-dark rounded-3 mx-auto lowerCarousels">

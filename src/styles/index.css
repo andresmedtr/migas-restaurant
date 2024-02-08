@@ -5,7 +5,7 @@
 @import url("https://unpkg.com/react-pdf/dist/page/TextLayer.css"); */
 
 body {
-  color: black;
+  color: #060503;
   font-family: "El Messiri", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -21,13 +21,26 @@ body {
   text-decoration: none;
 }
 
+.btn-warning {
+  background-color: #ddaf5a;
+}
+.btn-warning:hover {
+  background-color: #7d5331;
+}
+
+.descriptionBorders {
+  padding: 0.5rem;
+  border: 2px solid #f3deb6;
+  border-radius: 10px;
+}
+
 .bordersBottom {
-  border-bottom: 2px solid #b48303;
+  border-bottom: 2px solid #ddaf5a;
   border-radius: 10px;
 }
 
 .borderBottom {
-  border-bottom: 4px solid#b48303;
+  border-bottom: 4px solid#ddaf5a;
   border-radius: 10px;
 }
 
@@ -39,26 +52,20 @@ button.active {
   background: black;
 }
 
-.menuPdf {
-  width: 60%;
-  height: 60vh;
-  padding-top: 154.5455%;
-  padding-bottom: 0;
-  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-  margin: auto;
-  margin-top: 1.6em;
-  margin-bottom: 0.9em;
-  overflow: hidden;
-  border-radius: 8px;
-  will-change: transform;
+/* PDF CONTAINER */
+.react-pdf__Page {
+  background-image: url("../../public/assets/Logo-Home.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+  background-color: black;
 }
 
-.menuFrame {
-  width: 100%;
-  height: auto;
-  border: none;
-  padding: 0;
+/* DISPLAYED PDF */
+.react-pdf__Page__canvas {
   margin: auto;
+  width: 100% !important;
+  height: auto !important;
 }
 
 @media screen and (max-width: 768px) {

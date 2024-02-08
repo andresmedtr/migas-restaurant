@@ -7,10 +7,6 @@
   transition: all 0.28s ease-in-out;
 }
 
-.cardPrice {
-  text-decoration: 1px solid#b48303 underline;
-}
-
 @media screen and (max-width: 768px) {
   .butcheryH1 {
     font-size: 3rem;
