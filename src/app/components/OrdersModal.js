@@ -1,4 +1,5 @@
 import Modal from "react-bootstrap/Modal";
+import Image from "next/image";
 import Button from "react-bootstrap/Button";
 import "../../styles/order.css";
 
@@ -45,7 +46,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 target="_blank"
                 className="m-1 col"
                 rel="noreferrer">
-                <img
+                <Image
+                  width={30}
                   className="w-25 rounded col"
                   src="/assets/doordash.jpg"
                   alt="Doordash"
@@ -56,7 +58,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 target="_blank"
                 className="m-1"
                 rel="noreferrer">
-                <img
+                <Image
+                  width={30}
                   src="/assets/ubereats.jpg"
                   className="w-25 rounded col"
                   alt="Uber"
@@ -67,7 +70,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 target="_blank"
                 className="m-1"
                 rel="noreferrer">
-                <img
+                <Image
+                  width={30}
                   src="/assets/postmates-logo.jpg"
                   className="w-25 rounded col"
                   alt="Postmates"

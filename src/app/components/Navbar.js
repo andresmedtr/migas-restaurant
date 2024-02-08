@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import "../../styles/navbar.css";
 import Link from "next/link";
 import Navbar from "react-bootstrap/Navbar";
@@ -22,7 +23,12 @@ const CustomNavbar = () => {
     <div className="navbarContainer w-100">
       <Navbar expand="lg" variant="dark" className="navBar">
         <Navbar.Brand as={Link} href="/" className="navbarLogo">
-          <img className="logo-home" src="/assets/Logo-Home.png" alt="Logo" />
+          <Image
+            width={30}
+            className="logo-home"
+            src="/assets/Logo-Home.png"
+            alt="Logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarSupportedContent" />
         <Navbar.Collapse id="navbarSupportedContent" className="navbarItems">
