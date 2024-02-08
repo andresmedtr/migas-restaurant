@@ -24,7 +24,8 @@ const CustomNavbar = () => {
       <Navbar expand="lg" variant="dark" className="navBar">
         <Navbar.Brand as={Link} href="/" className="navbarLogo">
           <Image
-            width={30}
+            width={50}
+            height={30}
             className="logo-home"
             src="/assets/Logo-Home.png"
             alt="Logo"

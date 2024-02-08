@@ -47,7 +47,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1 col"
                 rel="noreferrer">
                 <Image
-                  width={30}
+                  height={80}
+                  width={5}
                   className="w-25 rounded col"
                   src="/assets/doordash.jpg"
                   alt="Doordash"
@@ -59,7 +60,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1"
                 rel="noreferrer">
                 <Image
-                  width={30}
+                  height={80}
+                  width={5}
                   src="/assets/ubereats.jpg"
                   className="w-25 rounded col"
                   alt="Uber"
@@ -71,7 +73,8 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1"
                 rel="noreferrer">
                 <Image
-                  width={30}
+                  height={80}
+                  width={5}
                   src="/assets/postmates-logo.jpg"
                   className="w-25 rounded col"
                   alt="Postmates"

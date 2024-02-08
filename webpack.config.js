@@ -12,18 +12,6 @@ const config = {
           outputPath: "static",
         },
       },
-      {
-        test: /\.(pdf)$/,
-        use: [
-          {
-            loader: fileLoader.default,
-            options: {
-              name: "[name].[ext]",
-              outputPath: "./public/assets/menus", // Output directory for PDF files
-            },
-          },
-        ],
-      },
     ],
   },
 };
