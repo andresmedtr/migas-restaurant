@@ -66,11 +66,12 @@
 
   .nav-items {
     text-align: center;
-  }
-  .nav-link {
     background-color: rgba(0, 0, 0, 1);
     color: white;
+    z-index: 5;
   }
+  /* .nav-link {
+  } */
   button {
     z-index: 5;
   }
