@@ -30,12 +30,12 @@ const PromotionsCarousel = ({ slide }) => {
             className={`${index === itemIdx ? "slideActive" : "slides"}`}
             key={index}>
             {index === itemIdx && (
-              <div className="mb-5">
+              <div className="mb-5 w-100">
                 <h2 className="mt-lg-5">{item.name}</h2>
                 {/* DISPLAYING IMAGE OR VIDEO ON DAILY SPECIALS SECTION */}
                 {!item.image ? (
                   <video
-                    className="w-50 rounded-4 "
+                    className="w-75 mx-auto rounded-4 "
                     loop
                     muted
                     playsInline
@@ -45,7 +45,7 @@ const PromotionsCarousel = ({ slide }) => {
                     <source src={`/assets/${item.video}`} />
                   </video>
                 ) : (
-                  <div className="rounded-4 w-50 mx-auto bg bg-dark text-center">
+                  <div className="rounded-4 w-75 mx-auto bg bg-dark text-center">
                     <Image
                       width={100}
                       height={100}
@@ -57,7 +57,7 @@ const PromotionsCarousel = ({ slide }) => {
                   </div>
                 )}
 
-                <h4 className="mt-2 w-50 bordersBottom mx-auto mb-5">
+                <h4 className="mt-2 w-75 descriptionBorders mx-auto mb-2 fs-4">
                   {item.description}
                 </h4>
               </div>

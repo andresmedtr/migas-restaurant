@@ -1,9 +1,11 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:wght@300&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kanit:wght@300&family=Poppins:wght@300&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=El+Messiri&family=Kanit:wght@300&family=Poppins:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=El+Messiri&family=Kanit:wght@300&family=Poppins:wght@300&display=swap");
+@import url("https://unpkg.com/react-pdf/dist/page/AnnotationLayer.css");
+@import url("https://unpkg.com/react-pdf/dist/page/TextLayer.css"); */
 
 body {
-  color: black;
+  color: #060503;
   font-family: "El Messiri", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -19,14 +21,51 @@ body {
   text-decoration: none;
 }
 
+.btn-warning {
+  background-color: #ddaf5a;
+}
+.btn-warning:hover {
+  background-color: #7d5331;
+}
+
+.descriptionBorders {
+  padding: 0.5rem;
+  border: 2px solid #f3deb6;
+  border-radius: 10px;
+}
+
 .bordersBottom {
-  border-bottom: 2px solid #b48303;
+  border-bottom: 2px solid #ddaf5a;
   border-radius: 10px;
 }
 
 .borderBottom {
-  border-bottom: 4px solid#b48303;
+  border-bottom: 4px solid#ddaf5a;
   border-radius: 10px;
+}
+
+.nav-link {
+  z-index: 1;
+}
+
+button.active {
+  background: black;
+}
+
+/* PDF CONTAINER */
+.react-pdf__Page {
+  background-image: url("../../public/assets/Logo-Home.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+  background-color: black;
+}
+
+/* DISPLAYED PDF */
+.react-pdf__Page__canvas {
+  margin: auto;
+  width: 100% !important;
+  height: auto !important;
 }
 
 @media screen and (max-width: 768px) {

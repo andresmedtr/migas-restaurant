@@ -1,12 +1,6 @@
-.borderBottom {
-  border-bottom: 5px solid #b48303;
-  border-radius: 10px;
-}
-
 .slider {
   position: relative;
   margin-top: 3rem;
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,45 +46,21 @@
   transition-duration: 1s;
 }
 
-/* .imageOverlay {
-  position: absolute;
-  top: 6.2%;
-  left: 0;
-  width: 100%;
-  height: 77%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.imageOverlayVideo {
-  position: absolute;
-  top: 6.7%;
-  left: 25%;
-  width: 100%;
-  height: 80%;
-  background-color: rgba(0, 0, 0, 0.4);
-} */
-
 @media screen and (max-width: 768px) {
   .slider {
     margin-top: 0;
     width: 100%;
     overflow: hidden;
-    height: 40vh;
-  }
-
-  .image {
-    width: 55%;
-    height: auto;
   }
 
   .right-arrow {
     font-size: 1.5rem;
     top: 44%;
-    right: 32px;
+    right: 20px;
   }
   .left-arrow {
     top: 44%;
-    left: 32px;
+    left: 20px;
     font-size: 1.5rem;
   }
 }
