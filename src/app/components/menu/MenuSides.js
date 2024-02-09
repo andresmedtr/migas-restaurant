@@ -36,7 +36,7 @@ const MenuSides = () => {
               className=" align-items-center closeButton"
             />
             <Image
-              src="/assets/menu/sides.jpg"
+              src="/assets/sides.jpg"
               className="sidesImage"
               width={170}
               height={170}

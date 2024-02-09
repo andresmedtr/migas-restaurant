@@ -1,20 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import {
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
 import { Document, Page, pdfjs } from "react-pdf";
+import MenuSides from "./MenuSides";
 
 const MenuTabs = () => {
   const menuSectionsArray = [
     { name: "Appetizers", file: "appetizers" },
     { name: "Breakfasts", file: "breakfasts" },
-    { name: "Entrees", file: "entrees" },
-    { name: "Pasta or Breads", file: "pastaAndBreads" },
     { name: "Drinks", file: "drinks" },
+    { name: "Breads and Pastas", file: "pastaAndBreads" },
+    { name: "From Our Grill", file: "entrees" },
   ];
 
+  // Sets the Clicked tab
   const [clickedSection, setClickedSection] = useState(
     menuSectionsArray[0].name
   );
+
+  // Set the number of pages
+  const [numPages, setNumPages] = useState(null);
+
+  // Sets the desired page
   const [pageNumber, setPageNumber] = useState(1);
 
   // This handles the selected tab and renders the PDF Menu for the specific TAB
@@ -23,10 +34,19 @@ const MenuTabs = () => {
     setPageNumber(1);
   };
 
-  // Setting custom styles for the generated canvas
-  const customRendererStyles = (canvas) => {
-    canvas.style.width = "100%";
-    canvas.style.height = "auto";
+  // Pages handling
+  const handleApprovedLoad = ({ numPages }) => {
+    setNumPages(numPages);
+    console.log(numPages);
+  };
+
+  const handleNextPage = (pageNumber) => {
+    console.log(pageNumber, "pageNumber", numPages, "number of pages");
+    if (pageNumber < numPages) setPageNumber(pageNumber + 1);
+  };
+  const handlePrevPage = (pageNumber) => {
+    console.log(pageNumber, "pageNumber", numPages, "number of pages");
+    if (pageNumber > 1) setPageNumber(pageNumber - 1);
   };
 
   // GlobalWorker set up for react-pdf
@@ -38,7 +58,7 @@ const MenuTabs = () => {
   // Returned Body
   return (
     <div className="pt-5">
-      <nav>
+      <nav className="pt-5">
         <div
           className="nav nav-tabs d-flex w-100 justify-content-center"
           id="nav-tab"
@@ -48,7 +68,7 @@ const MenuTabs = () => {
             return (
               <button
                 key={index}
-                className={`nav-link col-md-5 ${
+                className={`nav-link col text-secondary fs-5 ${
                   clickedSection === item ? "active" : ""
                 }`}
                 id={`nav-${item.toLowerCase()}-tab`}
@@ -66,6 +86,7 @@ const MenuTabs = () => {
         </div>
       </nav>
       <div className="tab-content" id="nav-tabContent">
+        <MenuSides />
         {menuSectionsArray.map((element, index) => {
           let item = element.name;
           return (
@@ -81,15 +102,35 @@ const MenuTabs = () => {
                 <div className="w-100 mx-auto">
                   <Document
                     file={`/assets/menus/${element.file}.pdf`}
-                    className={"mx-auto row h-auto"}>
+                    className={"mx-auto row h-auto"}
+                    onLoadSuccess={handleApprovedLoad}>
                     <Page
                       className={"col-lg-4 p-0 bg-dark mx-auto"}
+                      loading={<p></p>}
                       renderTextLayer={false}
                       renderAnnotationLayer={false}
                       pageNumber={pageNumber}
                     />
                   </Document>
-                  <div></div>
+                  <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
+                    <div className="d-flex row mx-auto">
+                      <div
+                        className="btn bg-warning col-lg-3 col-3"
+                        onClick={() => handlePrevPage(pageNumber)}>
+                        <FaRegArrowAltCircleLeft className="fs-3" />
+                      </div>
+                      <p className="col-lg-6 col-6 text-center m-auto fs-6">
+                        {pageNumber} of {numPages}
+                      </p>
+                      <div
+                        className="btn bg-warning col-lg-3 col-3"
+                        onClick={() => handleNextPage(pageNumber)}>
+                        <div>
+                          <FaRegArrowAltCircleRight className="fs-3" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
