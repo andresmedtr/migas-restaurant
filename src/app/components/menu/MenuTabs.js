@@ -15,6 +15,7 @@ const MenuTabs = () => {
     { name: "Drinks", file: "drinks" },
     { name: "Breads and Pastas", file: "pastaAndBreads" },
     { name: "From Our Grill", file: "entrees" },
+    { name: "Desserts", file: "desserts" },
   ];
 
   // Sets the Clicked tab
@@ -85,8 +86,8 @@ const MenuTabs = () => {
           })}
         </div>
       </nav>
+      {clickedSection === "From Our Grill" && <MenuSides />}
       <div className="tab-content" id="nav-tabContent">
-        <MenuSides />
         {menuSectionsArray.map((element, index) => {
           let item = element.name;
           return (
