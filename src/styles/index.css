@@ -52,13 +52,27 @@ button.active {
   background: black;
 }
 
+/* NAV-TABS MENU SECTION */
+button.nav-link {
+  border-width: 1.5px 1.5px 0 1.5px !important;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 10px !important;
+  border-style: solid !important;
+  border-color: #ddaf5a !important;
+}
+
+button.nav-link.active {
+  color: #373636 !important;
+  background-color: #edd0b3 !important;
+}
+
 /* PDF CONTAINER */
 .react-pdf__Page {
   background-image: url("../../public/assets/Logo-Home.png");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center center;
-  background-color: black;
+  background-color: black !important;
 }
 
 /* DISPLAYED PDF */
@@ -75,5 +89,15 @@ button.active {
     background-repeat: repeat;
     background-attachment: scroll;
     background-position: center center;
+  }
+  .react-pdf__Page__canvas {
+    margin: auto;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .react-pdf__Page {
+    width: 80%;
+    height: auto;
   }
 }
