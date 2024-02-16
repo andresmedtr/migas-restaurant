@@ -12,15 +12,26 @@ import { lazy } from "react";
 
 const MenuTabs = () => {
   const menuImgsSectionsArray = [
-    { name: "Appetizers", file: ["ap1", "ap2"] },
-    { name: "Breakfasts", file: ["bf1", "bf2", "bf3"] },
+    { name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
+    { name: "Breakfasts/Brunch", file: ["bf1", "bf2", "bf3", "brunch"] },
     { name: "Drinks", file: ["dr1"] },
     {
       name: "Breads and Pastas",
       file: ["bread1", "bread2", "bread3", "bread4", "bread5", "bread6"],
     },
-    { name: "From Our Grill", file: ["grill1", "2", "3"] },
-    { name: "Desserts", file: ["1", "2", "3"] },
+    {
+      name: "From Our Grill",
+      file: [
+        "grill1",
+        "grill2",
+        "grill3",
+        "grill4",
+        "grill5",
+        "grill6",
+        "grill7",
+      ],
+    },
+    { name: "Desserts", file: ["dessert1"] },
   ];
 
   const menuSectionsArray = [
