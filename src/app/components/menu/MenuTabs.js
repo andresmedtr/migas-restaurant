@@ -59,7 +59,7 @@ const MenuTabs = () => {
   // Returned Body
   return (
     <div className="pt-5">
-      <nav className="pt-5">
+      <nav className="">
         <div
           className="nav nav-tabs d-flex w-100 justify-content-center"
           id="nav-tab"
@@ -100,11 +100,15 @@ const MenuTabs = () => {
               role="tabpanel"
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
-                <div className="w-100 mx-auto">
+                <div className="w-100 mx-auto p-5">
                   <embed
-                    src={`/assets/menus/${element.file}.pdf#toolbar=0`}
+                    src={`/assets/menus/${element.file}.pdf#toolbar=0${
+                      element.file === "drinks" || element.file === "desserts"
+                        ? ""
+                        : "&zoom=75"
+                    }`}
                     type="application/pdf"
-                    className={"mx-auto row w-100 "}
+                    className={"mx-auto w-100 "}
                     style={{ height: "calc(100vh - 50px)" }}
                   />
 
