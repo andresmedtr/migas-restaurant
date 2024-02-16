@@ -129,6 +129,7 @@ const MenuTabs = () => {
                   {element.file.map((fileItem, fileIndex) => (
                     <Image
                       src={`/assets/menuImg/${fileItem}.png`}
+                      className="p-3"
                       width={350}
                       height={500}
                       alt={fileIndex}
