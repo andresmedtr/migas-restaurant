@@ -105,7 +105,7 @@ const MenuTabs = () => {
                     src={`/assets/menus/${element.file}.pdf#toolbar=0${
                       element.file === "drinks" || element.file === "desserts"
                         ? ""
-                        : "&zoom=75"
+                        : "&zoom=100"
                     }`}
                     type="application/pdf"
                     className={"mx-auto w-100 "}
