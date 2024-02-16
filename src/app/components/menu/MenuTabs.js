@@ -89,7 +89,7 @@ const MenuTabs = () => {
           className="nav nav-tabs d-flex w-100 justify-content-center"
           id="nav-tab"
           role="tablist">
-          {menuSectionsArray.map((element, index) => {
+          {menuImgsSectionsArray.map((element, index) => {
             let item = element.name;
             return (
               <button
@@ -132,7 +132,7 @@ const MenuTabs = () => {
                       width={350}
                       height={500}
                       alt={fileIndex}
-                      key="image"
+                      key={`${fileItem} - ${fileIndex}`}
                     />
                   ))}
                 </div>
