@@ -102,12 +102,23 @@ const MenuTabs = () => {
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-5 text-center">
-                  <object
+                  {/* <object
                     data={`/assets/menus/${element.file}.pdf#zoom=75`}
                     type="application/pdf"
                     className={"w-100 pdfContent"}
-                  />
-
+                  /> */}
+                  <div
+                  //                     style="position: relative; width: 100%; height: 0; padding-top: 154.5455%;
+                  //  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                  //  border-radius: 8px; will-change: transform;"
+                  >
+                    <iframe
+                      loading="lazy"
+                      // style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                      src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFsXtvYCgU&#x2F;view?embed"
+                      allowfullscreen="allowfullscreen"
+                      allow="fullscreen"></iframe>
+                  </div>
                   {/* <Document
                     lazy
                     file={`/assets/menus/${element.file}.pdf`}
