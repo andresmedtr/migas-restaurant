@@ -100,7 +100,14 @@ const MenuTabs = () => {
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
                 <div className="w-100 mx-auto">
-                  <Document
+                  <embed
+                    src={`/assets/menus/${element.file}.pdf#toolbar=0`}
+                    type="application/pdf"
+                    className={"mx-auto row w-100 "}
+                    style={{ height: "calc(100vh - 50px)" }}
+                  />
+
+                  {/* <Document
                     file={`/assets/menus/${element.file}.pdf`}
                     className={"mx-auto row h-auto"}
                     onLoadSuccess={handleApprovedLoad}>
@@ -111,7 +118,7 @@ const MenuTabs = () => {
                       renderAnnotationLayer={false}
                       pageNumber={pageNumber}
                     />
-                  </Document>
+                  </Document> */}
                   <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
                     <div className="d-flex row mx-auto">
                       <div
