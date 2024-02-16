@@ -255,13 +255,13 @@
       },
       {
         "name": "Skirt Steak",
-        "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
+        "description": "",
         "price": "22.99",
         "image": "outsideskirt.jpg"
       },
       {
         "name": "Ribeye Steak",
-        "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
+        "description": "",
         "price": "22.99",
         "image": "ribeye.jpg"
       },
@@ -333,12 +333,6 @@
       "description": "All of our desserts in one image",
       "price": "",
       "image": "desserts.jpg"
-    },
-    {
-      "name": "Milhojas",
-      "description": "Delicious layered napoleon with vanilla custard and your favorite topping",
-      "price": "8.99",
-      "image": "milhojas.jpg"
     }
   ],
   "extras": [{ "name": "", "description": "", "price": "", "image": "" }],

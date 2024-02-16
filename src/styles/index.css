@@ -82,7 +82,7 @@ button.nav-link.active {
   height: auto !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1150px) {
   body {
     background-image: url("../../public/assets/bgphoneview.jpg");
     background-size: cover;

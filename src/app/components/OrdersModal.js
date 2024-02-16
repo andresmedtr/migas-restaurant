@@ -21,12 +21,12 @@ const OrdersModal = ({ show, handleShow }) => {
           <div className="mt-5 m-5">
             <h2 className="text-center">Take-Out</h2>
             <div className="text-center">
-              <a
+              {/* <a
                 href="https://fndn.mn/rbh0p5eRg"
                 target="_blank"
-                rel="noreferrer">
-                <Button className="btn btn-warning">Order Now</Button>
-              </a>
+                rel="noreferrer"> */}
+              <Button className="btn btn-warning">COMING SOON!</Button>
+              {/* </a> */}
             </div>
           </div>
           <div className="m-5 row w-100 mx-auto">

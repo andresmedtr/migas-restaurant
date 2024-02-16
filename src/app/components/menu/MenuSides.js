@@ -33,13 +33,13 @@ const MenuSides = () => {
             <FontAwesomeIcon
               icon={faTimes}
               onClick={handleSides}
-              className=" align-items-center closeButton"
+              className=" align-items-center closeButton text-light"
             />
             <Image
-              src="/assets/sides.jpg"
+              src="/assets/sides.png"
               className="sidesImage"
-              width={170}
-              height={170}
+              width={250}
+              height={250}
               alt="Sides"
               key="image"
             />
