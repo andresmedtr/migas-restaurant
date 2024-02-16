@@ -105,4 +105,7 @@ button.nav-link.active {
     width: 80%;
     height: auto;
   } */
+  .pdfContent {
+    height: auto;
+  }
 }
