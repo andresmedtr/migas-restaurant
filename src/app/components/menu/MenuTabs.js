@@ -59,7 +59,7 @@ const MenuTabs = () => {
   // Returned Body
   return (
     <div className="pt-5">
-      <nav className="">
+      <nav className="pt-3">
         <div
           className="nav nav-tabs d-flex w-100 justify-content-center"
           id="nav-tab"
@@ -120,7 +120,7 @@ const MenuTabs = () => {
                       pageNumber={pageNumber}
                     />
                   </Document> */}
-                  <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
+                  {/* <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
                     <div className="d-flex row mx-auto">
                       <div
                         className="btn bg-warning col-lg-3 col-3"
@@ -138,7 +138,7 @@ const MenuTabs = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
