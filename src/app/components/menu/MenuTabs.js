@@ -14,7 +14,7 @@ const MenuTabs = () => {
   const menuImgsSectionsArray = [
     { name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
     { name: "Breakfasts/Brunch", file: ["bf1", "bf2", "bf3", "brunch"] },
-    { name: "Drinks", file: ["dr1"] },
+    { name: "Drinks", file: ["drinks"] },
     {
       name: "Breads and Pastas",
       file: ["bread1", "bread2", "bread3", "bread4", "bread5", "bread6"],
@@ -31,7 +31,7 @@ const MenuTabs = () => {
         "grill7",
       ],
     },
-    { name: "Desserts", file: ["dessert1"] },
+    { name: "Desserts", file: ["desserts"] },
   ];
 
   const menuSectionsArray = [
