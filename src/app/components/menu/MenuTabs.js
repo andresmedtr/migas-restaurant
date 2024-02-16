@@ -105,7 +105,7 @@ const MenuTabs = () => {
                     src={`/assets/menus/${element.file}.pdf#toolbar=0}`}
                     type="application/pdf"
                     className={"mx-auto w-100 "}
-                    style={{ height: "calc(70vh - 50px)" }}
+                    // style={{ height: "calc(70vh - 50px)" }}
                   />
 
                   {/* <Document
