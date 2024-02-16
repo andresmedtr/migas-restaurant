@@ -105,11 +105,11 @@ const MenuTabs = () => {
                     src={`/assets/menus/${element.file}.pdf#toolbar=0${
                       element.file === "drinks" || element.file === "desserts"
                         ? ""
-                        : "&zoom=100"
+                        : ""
                     }`}
                     type="application/pdf"
                     className={"mx-auto w-100 "}
-                    style={{ height: "calc(90vh - 50px)" }}
+                    style={{ height: "calc(70vh - 50px)" }}
                   />
 
                   {/* <Document
