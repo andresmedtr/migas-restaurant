@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { Document, Page, pdfjs } from "react-pdf";
 import MenuSides from "./MenuSides";
+import { lazy } from "react";
 
 const MenuTabs = () => {
   const menuSectionsArray = [
@@ -101,13 +102,14 @@ const MenuTabs = () => {
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-5 text-center">
-                  <object
-                    data={`/assets/menus/${element.file}.pdf#toolbar=0&scrollbar=1&zoom=75`}
+                  <iframe
+                    src={`/assets/menus/${element.file}.pdf#toolbar=0&zoom=75`}
                     type="application/pdf"
                     className={"w-100 pdfContent"}
                   />
 
                   {/* <Document
+                    lazy
                     file={`/assets/menus/${element.file}.pdf`}
                     className={"mx-auto row h-auto"}
                     onLoadSuccess={handleApprovedLoad}>
@@ -118,8 +120,8 @@ const MenuTabs = () => {
                       renderAnnotationLayer={false}
                       pageNumber={pageNumber}
                     />
-                  </Document> */}
-                  {/* <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
+                  </Document>
+                  <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
                     <div className="d-flex row mx-auto">
                       <div
                         className="btn bg-warning col-lg-3 col-3"
