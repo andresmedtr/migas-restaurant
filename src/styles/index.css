@@ -82,6 +82,11 @@ button.nav-link.active {
   height: auto !important;
 }
 
+/* pdfContent */
+.pdfContent {
+  height: calc(100vh - 50px);
+}
+
 @media screen and (max-width: 1150px) {
   body {
     background-image: url("../../public/assets/bgphoneview.jpg");
