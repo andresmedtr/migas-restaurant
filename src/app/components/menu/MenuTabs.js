@@ -109,7 +109,7 @@ const MenuTabs = () => {
                     }`}
                     type="application/pdf"
                     className={"mx-auto w-100 "}
-                    style={{ height: "calc(100vh - 50px)" }}
+                    style={{ height: "calc(90vh - 50px)" }}
                   />
 
                   {/* <Document
