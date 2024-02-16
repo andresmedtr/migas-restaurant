@@ -52,7 +52,7 @@
     z-index: 3;
   }
   .navBar {
-    height: 5%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.98);
     position: fixed;
     width: 100%;

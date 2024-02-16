@@ -102,11 +102,7 @@ const MenuTabs = () => {
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-5">
                   <embed
-                    src={`/assets/menus/${element.file}.pdf#toolbar=0${
-                      element.file === "drinks" || element.file === "desserts"
-                        ? ""
-                        : ""
-                    }`}
+                    src={`/assets/menus/${element.file}.pdf#toolbar=0}`}
                     type="application/pdf"
                     className={"mx-auto w-100 "}
                     style={{ height: "calc(70vh - 50px)" }}
