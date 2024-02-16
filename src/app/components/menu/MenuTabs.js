@@ -101,10 +101,10 @@ const MenuTabs = () => {
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-5 text-center">
-                  <embed
-                    src={`/assets/menus/${element.file}.pdf#toolbar=0&scrollbar=1`}
+                  <object
+                    data={`/assets/menus/${element.file}.pdf#toolbar=0&scrollbar=1&zoom=75`}
                     type="application/pdf"
-                    className={"w-75 pdfContent"}
+                    className={"w-100 pdfContent"}
                   />
 
                   {/* <Document
