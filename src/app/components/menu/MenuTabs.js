@@ -127,14 +127,17 @@ const MenuTabs = () => {
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-5 text-center">
                   {element.file.map((fileItem, fileIndex) => (
-                    <Image
-                      src={`/assets/menuImg/${fileItem}.png`}
-                      className="p-3"
-                      width={350}
-                      height={500}
-                      alt={fileIndex}
-                      key={`${fileItem} - ${fileIndex}`}
-                    />
+                    <div className="w-100">
+                      <Image
+                        src={`/assets/menuImg/${fileItem}.png`}
+                        className="p-3 menuImages"
+                        fill
+                        // width={500}
+                        // height={650}
+                        alt={fileIndex}
+                        key={`${fileItem} - ${fileIndex}`}
+                      />
+                    </div>
                   ))}
                 </div>
               )}
