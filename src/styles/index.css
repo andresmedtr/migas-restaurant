@@ -66,27 +66,6 @@ button.nav-link.active {
   background-color: #edd0b3 !important;
 }
 
-/* PDF CONTAINER */
-.react-pdf__Page {
-  background-image: url("../../public/assets/Logo-Home.png");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center center;
-  background-color: black !important;
-}
-
-/* DISPLAYED PDF */
-.react-pdf__Page__canvas {
-  margin: auto;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* pdfContent */
-.pdfContent {
-  height: calc(100vh - 50px);
-}
-
 @media screen and (max-width: 1150px) {
   body {
     background-image: url("../../public/assets/bgphoneview.jpg");
@@ -94,15 +73,5 @@ button.nav-link.active {
     background-repeat: repeat;
     background-attachment: scroll;
     background-position: center center;
-  }
-  .react-pdf__Page__canvas {
-    margin: auto;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .react-pdf__Page {
-    width: 80%;
-    height: auto;
   }
 }

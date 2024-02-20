@@ -1,37 +1,39 @@
 "use client";
 
 import { useState } from "react";
-import {
-  FaRegArrowAltCircleLeft,
-  FaRegArrowAltCircleRight,
-} from "react-icons/fa";
 import Image from "next/image";
-import { Document, Page, pdfjs } from "react-pdf";
 import MenuSides from "./MenuSides";
 import { lazy } from "react";
 
 const MenuTabs = () => {
   const menuImgsSectionsArray = [
     { name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
+    {
+      name: "Grilled",
+      file: ["grill3", "grill4", "grill5", "grill6", "grill7"],
+    },
+    {
+      name: "Chef's Specials",
+      file: ["grill2", "grill1", "grill8"],
+    },
     { name: "Breakfasts/Brunch", file: ["bf1", "bf2", "bf3", "brunch"] },
-    { name: "Drinks", file: ["drinks"] },
+
     {
-      name: "Breads and Pastas",
-      file: ["bread1", "bread2", "bread3", "bread4", "bread5", "bread6"],
+      name: "Breads",
+      file: ["bread1", "bread2", "bread3", "bread4"],
     },
     {
-      name: "From Our Grill",
-      file: [
-        "grill1",
-        "grill2",
-        "grill3",
-        "grill4",
-        "grill5",
-        "grill6",
-        "grill7",
-      ],
+      name: "Pastas",
+      file: ["pastas"],
     },
+    {
+      name: "Kids",
+      file: ["kids"],
+    },
+    { name: "Vegan & Fish", file: ["vegan"] },
+
     { name: "Desserts", file: ["desserts"] },
+    { name: "Drinks", file: ["drinks", "drinks1"] },
   ];
 
   const menuSectionsArray = [
@@ -45,41 +47,19 @@ const MenuTabs = () => {
 
   // Sets the Clicked tab
   const [clickedSection, setClickedSection] = useState(
-    menuSectionsArray[0].name
+    menuSectionsArray[4].name
   );
-
-  // Set the number of pages
-  const [numPages, setNumPages] = useState(null);
-
-  // Sets the desired page
-  const [pageNumber, setPageNumber] = useState(1);
 
   // This handles the selected tab and renders the PDF Menu for the specific TAB
   const handleClick = (item) => {
     setClickedSection(item);
-    setPageNumber(1);
   };
 
-  // Pages handling
-  const handleApprovedLoad = ({ numPages }) => {
-    setNumPages(numPages);
-    console.log(numPages);
-  };
-
-  const handleNextPage = (pageNumber) => {
-    console.log(pageNumber, "pageNumber", numPages, "number of pages");
-    if (pageNumber < numPages) setPageNumber(pageNumber + 1);
-  };
-  const handlePrevPage = (pageNumber) => {
-    console.log(pageNumber, "pageNumber", numPages, "number of pages");
-    if (pageNumber > 1) setPageNumber(pageNumber - 1);
-  };
-
-  // GlobalWorker set up for react-pdf
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/build/pdf.worker.min.js",
-    import.meta.url
-  ).toString();
+  // // GlobalWorker set up for react-pdf
+  // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  //   "pdfjs-dist/build/pdf.worker.min.js",
+  //   import.meta.url
+  // ).toString();
 
   // Returned Body
   return (
@@ -94,7 +74,7 @@ const MenuTabs = () => {
             return (
               <button
                 key={index}
-                className={`nav-link col text-secondary fs-5 ${
+                className={`nav-link col text-secondary fs-md-5 ${
                   clickedSection === item ? "active" : ""
                 }`}
                 id={`nav-${item.toLowerCase()}-tab`}
@@ -125,11 +105,11 @@ const MenuTabs = () => {
               role="tabpanel"
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
-                <div className="w-100 mx-auto p-5 text-center">
+                <div className="w-100 mx-auto p-2 text-center">
                   {element.file.map((fileItem, fileIndex) => (
                     <Image
                       src={`/assets/menuImg/${fileItem}.png`}
-                      className="p-3"
+                      className="mx-auto"
                       width={350}
                       height={500}
                       alt={fileIndex}
