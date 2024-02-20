@@ -82,7 +82,10 @@ const MenuTabs = () => {
           })}
         </div>
       </nav>
-      {clickedSection === "Grilled" && <MenuSides />}
+      {clickedSection === "Grilled" || clickedSection == "Chef's Specials" ? (
+        <MenuSides />
+      ) : null}
+
       <div className="tab-content" id="nav-tabContent">
         {menuImgsSectionsArray.map((element, index) => {
           let item = element.name;
@@ -100,9 +103,9 @@ const MenuTabs = () => {
                   {element.file.map((fileItem, fileIndex) => (
                     <Image
                       src={`/assets/menuImg/${fileItem}.png`}
-                      className="mx-auto"
-                      width={350}
-                      height={500}
+                      className="menuImages mx-auto p-3 col-lg-3"
+                      width={450}
+                      height={600}
                       alt={fileIndex}
                       key={`${fileItem} - ${fileIndex}`}
                     />

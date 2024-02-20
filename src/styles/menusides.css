@@ -19,16 +19,14 @@
 
 .closeButton {
   position: absolute;
-  width: 10%;
+  width: 100%;
   top: 5%;
-  right: 33%;
   z-index: 1;
   cursor: pointer;
 }
 
 .sidesImage {
   position: fixed;
-  width: 100%;
   right: 34%;
 }
 
@@ -36,7 +34,7 @@
   margin: auto;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 768px) {
   .sidesButton {
     width: 5%;
   }
@@ -63,10 +61,15 @@
 
   .closeButton {
     width: 100%;
-    right: 65%;
-    width: 10px;
+    top: 1%;
+    left: -300%;
   }
   .heightSetting {
     min-height: 100vh;
+  }
+
+  .menuImages {
+    width: 380px !important;
+    height: 550px !important;
   }
 }

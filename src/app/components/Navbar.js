@@ -56,13 +56,13 @@ const CustomNavbar = () => {
               }}>
               Order
             </Nav.Item>
-            <Nav.Link
+            {/* <Nav.Link
               as={Link}
               href="/butchery"
               className="nav-link"
               onClick={handleToggle}>
               Butchery
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link
               as={Link}
               href="/contact"

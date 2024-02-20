@@ -108,8 +108,8 @@ const PlatesCarousel = () => {
         <div className="col-lg-12">
           <h2 className="text-center mx-auto w-50">BUTCHERY</h2>
         </div>
-        <Link href="/butchery">
-          <Carousel className=" bg-dark rounded-3 mx-auto lowerCarousels">
+        {/* <Link href="/butchery"> */}
+        {/* <Carousel className=" bg-dark rounded-3 mx-auto lowerCarousels">
             {menuData.butchery.steaks.map((item, index) => (
               <Carousel.Item key={index}>
                 <Image
@@ -126,8 +126,8 @@ const PlatesCarousel = () => {
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
-          </Carousel>
-        </Link>
+          </Carousel> */}
+        {/* </Link> */}
       </div>
       <div className="d-flex justify-content-center pt-5">
         <Link
