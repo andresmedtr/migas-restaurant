@@ -122,60 +122,6 @@ const MenuTabs = () => {
           );
         })}
       </div>
-      {/* OBJECT TAG DOESNT WORK ON MOBILES */}
-      {/* <object
-                    data={`/assets/menus/${element.file}.pdf#zoom=75`}
-                    type="application/pdf"
-                    className={"w-100 pdfContent"}
-                  /> */}
-
-      {/* CANVAS HTML CODE TO RENDER PDFS DOESNT WORK ON MOBILES*/}
-      {/* <div
-                                      style="position: relative; width: 100%; height: 0; padding-top: 154.5455%;
-                   padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-                   border-radius: 8px; will-change: transform;"
-                  >
-                    <iframe
-                      loading="lazy"
-                      style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                      src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFsXtvYCgU&#x2F;view?embed"
-                      allowfullscreen="allowfullscreen"
-                      allow="fullscreen"></iframe>
-                  </div> */}
-
-      {/* react pdf */}
-      {/* <Document
-                    lazy
-                    file={`/assets/menus/${element.file}.pdf`}
-                    className={"mx-auto row h-auto"}
-                    onLoadSuccess={handleApprovedLoad}>
-                    <Page
-                      className={"col-lg-4 p-0 bg-dark mx-auto"}
-                      loading={<p></p>}
-                      renderTextLayer={false}
-                      renderAnnotationLayer={false}
-                      pageNumber={pageNumber}
-                    />
-                  </Document>
-                  <div className="mt-3 col-lg-2 col-5  m-auto border border-warning rounded-3">
-                    <div className="d-flex row mx-auto">
-                      <div
-                        className="btn bg-warning col-lg-3 col-3"
-                        onClick={() => handlePrevPage(pageNumber)}>
-                        <FaRegArrowAltCircleLeft className="fs-3" />
-                      </div>
-                      <p className="col-lg-6 col-6 text-center m-auto fs-6">
-                        {pageNumber} of {numPages}
-                      </p>
-                      <div
-                        className="btn bg-warning col-lg-3 col-3"
-                        onClick={() => handleNextPage(pageNumber)}>
-                        <div>
-                          <FaRegArrowAltCircleRight className="fs-3" />
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
     </div>
   );
 };
