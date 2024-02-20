@@ -14,14 +14,14 @@ const MenuSides = () => {
   return (
     <div className="">
       <div className="d-flex justify-content-end fixedButton me-4">
-        <h3
+        <button
           onClick={handleSides}
-          className={`btn d-flex align-items-center text-center ${
+          className={`btn align-items-center text-center ${
             showSides && "d-none"
           }`}
           style={{ backgroundColor: "#FFA50080", color: "#000000" }}>
-          Sides
-        </h3>
+          S<br />I<br />D<br />E<br />S
+        </button>
       </div>
       {showSides && (
         <motion.div

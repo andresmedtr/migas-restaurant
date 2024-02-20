@@ -2,24 +2,26 @@
   z-index: 4;
   position: fixed;
   bottom: 50%;
-  right: 20%;
+  right: 0%;
   width: 10%;
 }
 
-.fixedButton h3 {
+.fixedButton button {
   font-size: 1rem;
 }
 
-.fixedButton h3:hover {
+.fixedButton button:hover {
   border: 2px solid #b38203;
-  background-color: #b38203;
+
+  background: #8e6808;
   scale: 1.1;
 }
 
 .closeButton {
   position: absolute;
   width: 10%;
-  right: 3%;
+  top: 5%;
+  right: 33%;
   z-index: 1;
   cursor: pointer;
 }
@@ -27,7 +29,7 @@
 .sidesImage {
   position: fixed;
   width: 100%;
-  right: 1%;
+  right: 34%;
 }
 
 .menuImagesContainer {
@@ -40,21 +42,28 @@
   }
 
   .sidesImage {
-    width: 150px;
-    height: 150px;
+    position: relative;
+    width: 150px !important;
+    height: 150px !important;
+    left: -300%;
+    bottom: 50%;
   }
 
   .fixedButton {
-    bottom: 16%;
-    right: 38%;
+    bottom: 50%;
+    right: -5%;
   }
 
   .sides-container {
+    position: absolute;
     height: auto;
+    bottom: 50%;
     width: 100%;
   }
 
   .closeButton {
+    width: 100%;
+    right: 65%;
     width: 10px;
   }
   .heightSetting {

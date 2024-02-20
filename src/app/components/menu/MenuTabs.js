@@ -91,7 +91,7 @@ const MenuTabs = () => {
           })}
         </div>
       </nav>
-      {clickedSection === "From Our Grill" && <MenuSides />}
+      {clickedSection === "Grilled" && <MenuSides />}
       <div className="tab-content" id="nav-tabContent">
         {menuImgsSectionsArray.map((element, index) => {
           let item = element.name;
