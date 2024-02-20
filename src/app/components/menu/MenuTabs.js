@@ -20,7 +20,7 @@ const MenuTabs = () => {
 
     {
       name: "Breads",
-      file: ["bread1", "bread2", "bread3", "bread4"],
+      file: ["bread1", "bread2", "bread3"],
     },
     {
       name: "Pastas",
@@ -36,18 +36,9 @@ const MenuTabs = () => {
     { name: "Drinks", file: ["drinks", "drinks1"] },
   ];
 
-  const menuSectionsArray = [
-    { name: "Appetizers", file: "appetizers" },
-    { name: "Breakfasts", file: "breakfasts" },
-    { name: "Drinks", file: "drinks" },
-    { name: "Breads and Pastas", file: "pastaAndBreads" },
-    { name: "From Our Grill", file: "entrees" },
-    { name: "Desserts", file: "desserts" },
-  ];
-
   // Sets the Clicked tab
   const [clickedSection, setClickedSection] = useState(
-    menuSectionsArray[4].name
+    menuImgsSectionsArray[1].name
   );
 
   // This handles the selected tab and renders the PDF Menu for the specific TAB
