@@ -59,6 +59,9 @@ const Footer = () => {
             </p>
           </div>
         </div>
+        <div>
+          <p>© All rights reserved, Migas Steakhouse 2023.</p>
+        </div>
       </div>
     </footer>
   );

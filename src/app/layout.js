@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import "@/styles/index.css";
 
 export const metadata = {
-  title: "Migas",
-  description: "Created by andresmedinatr",
+  title: "Migas Steakhouse",
+  description: "Miga's Florida, developed by andresmedinatr",
 };
 
 export default function RootLayout({ children }) {
