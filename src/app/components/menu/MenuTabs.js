@@ -30,7 +30,7 @@ const MenuTabs = () => {
       name: "Kids",
       file: ["kids"],
     },
-    { name: "Vegan & Fish", file: ["vegan"] },
+    { name: "Vegan & Fish", file: ["vegan", "fish"] },
 
     { name: "Desserts", file: ["desserts"] },
     { name: "Drinks", file: ["drinks", "drinks1"] },
