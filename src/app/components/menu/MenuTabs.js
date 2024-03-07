@@ -1,56 +1,91 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import MenuSides from "./MenuSides";
+import { createClient } from "contentful";
 import { lazy } from "react";
 
 const MenuTabs = () => {
   const menuImgsSectionsArray = [
-    { name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
+    { id: "appetizers", name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
     {
+      id: "grilled",
       name: "Grilled",
       file: ["grill3", "grill4", "grill5", "grill6", "grill7"],
     },
     {
+      id: "chefSpecials",
       name: "Chef's Specials",
       file: ["grill2", "grill1", "grill8"],
     },
-    { name: "Breakfasts/Brunch", file: ["bf1", "bf2", "bf3", "brunch"] },
+    {
+      id: "breakfastsbrunch",
+      name: "Breakfasts/Brunch",
+      file: ["bf1", "bf2", "bf3", "brunch"],
+    },
 
     {
+      id: "breads",
       name: "Breads",
       file: ["bread1", "bread2", "bread3"],
     },
     {
+      id: "pastas",
       name: "Pastas",
       file: ["pastas"],
     },
     {
+      id: "kids",
       name: "Kids",
       file: ["kids"],
     },
-    { name: "Vegan & Fish", file: ["vegan", "fish"] },
+    { id: "veganFish", name: "Vegan & Fish", file: ["vegan", "fish"] },
 
-    { name: "Desserts", file: ["desserts"] },
-    { name: "Drinks", file: ["drinks", "drinks1"] },
+    { id: "desserts", name: "Desserts", file: ["desserts"] },
+    { id: "drinks", name: "Drinks", file: ["drinks", "drinks1"] },
   ];
+
+  const [menuImages, setMenuImages] = useState([]);
 
   // Sets the Clicked tab
   const [clickedSection, setClickedSection] = useState(
     menuImgsSectionsArray[1].name
   );
+  // Set the ID of the clicked section to fetch from Contentful
+  const [clickedSectionId, setClickedSectionId] = useState(
+    menuImgsSectionsArray[1].id
+  );
+
+  const client = createClient({
+    space: "v2nngvrhsj96",
+    accessToken: "KHqFaCzUhOBaSznUy_JZog3zH0bVQREKm9SgOXw7MKM",
+  });
 
   // This handles the selected tab and renders the PDF Menu for the specific TAB
-  const handleClick = (item) => {
-    setClickedSection(item);
+  const handleClick = (element) => {
+    setClickedSection(element.name);
+    setClickedSectionId(element.id);
   };
 
-  // // GlobalWorker set up for react-pdf
-  // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  //   "pdfjs-dist/build/pdf.worker.min.js",
-  //   import.meta.url
-  // ).toString();
+  // fetching menu images from contentful
+  useEffect(() => {
+    const fetchMenuImages = async () => {
+      try {
+        const response = await client.getAssets({
+          "metadata.tags.sys.id[in]": clickedSectionId,
+        });
+        const images = response.items.map((item) => ({
+          title: item.fields.title,
+          url: `https:${item.fields.file.url}`,
+        }));
+        setMenuImages(images);
+      } catch (error) {
+        console.error("Error fetching menu images:", error);
+      }
+    };
+    if (clickedSectionId) fetchMenuImages();
+  }, [clickedSectionId]);
 
   // Returned Body
   return (
@@ -74,7 +109,7 @@ const MenuTabs = () => {
                 type="button"
                 role="tab"
                 aria-controls={`nav-${item.toLowerCase()}`}
-                onClick={() => handleClick(item)}
+                onClick={() => handleClick(element)}
                 aria-selected={clickedSection === item}>
                 {item}
               </button>
@@ -85,8 +120,9 @@ const MenuTabs = () => {
       {clickedSection === "Grilled" || clickedSection == "Chef's Specials" ? (
         <MenuSides />
       ) : null}
-
+      {/* <RenderMenu clickedSection={clickedSection} /> */}
       <div className="tab-content" id="nav-tabContent">
+        {console.log(menuImages)}
         {menuImgsSectionsArray.map((element, index) => {
           let item = element.name;
           return (
@@ -100,14 +136,14 @@ const MenuTabs = () => {
               aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
               {clickedSection === item && (
                 <div className="w-100 mx-auto p-2 text-center">
-                  {element.file.map((fileItem, fileIndex) => (
+                  {menuImages.map((file, fileIndex) => (
                     <Image
-                      src={`/assets/menuImg/${fileItem}.png`}
+                      src={file.url}
                       className="menuImages mx-auto p-3 col-lg-3"
                       width={450}
                       height={600}
-                      alt={fileIndex}
-                      key={`${fileItem} - ${fileIndex}`}
+                      alt={file.title}
+                      key={`${file.title}`}
                     />
                   ))}
                 </div>
