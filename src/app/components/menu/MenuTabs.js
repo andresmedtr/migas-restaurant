@@ -58,8 +58,8 @@ const MenuTabs = () => {
   );
 
   const client = createClient({
-    space: "v2nngvrhsj96",
-    accessToken: "KHqFaCzUhOBaSznUy_JZog3zH0bVQREKm9SgOXw7MKM",
+    space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
+    accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
   });
 
   // This handles the selected tab and renders the PDF Menu for the specific TAB
@@ -122,7 +122,6 @@ const MenuTabs = () => {
       ) : null}
       {/* <RenderMenu clickedSection={clickedSection} /> */}
       <div className="tab-content" id="nav-tabContent">
-        {console.log(menuImages)}
         {menuImgsSectionsArray.map((element, index) => {
           let item = element.name;
           return (
