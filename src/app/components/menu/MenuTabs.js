@@ -82,6 +82,7 @@ const MenuTabs = () => {
         setMenuImages(images);
       } catch (error) {
         console.error("Error fetching menu images:", error);
+        setTimeout(fetchMenuImages, 3000);
       }
     };
     if (clickedSectionId) fetchMenuImages();
