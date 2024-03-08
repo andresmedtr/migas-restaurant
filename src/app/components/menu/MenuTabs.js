@@ -74,6 +74,7 @@ const MenuTabs = () => {
       try {
         const response = await client.getAssets({
           "metadata.tags.sys.id[in]": clickedSectionId,
+          order: "-sys.createdAt",
         });
         const images = response.items.map((item) => ({
           title: item.fields.title,
