@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { Carousel } from "react-bootstrap";
 import "../../styles/carousel.css";
 import { motion } from "framer-motion";
@@ -8,10 +9,10 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import OrdersModal from "./OrdersModal";
 
 const CarouselPage = () => {
-  const videoRef = useRef();
-  useEffect(() => {
-    videoRef.current.play();
-  }, []);
+  // const videoRef = useRef();
+  // useEffect(() => {
+  //   videoRef.current.play();
+  // }, []);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -78,16 +79,18 @@ const CarouselPage = () => {
       </motion.h5>
       <Carousel interval={2000} style={{ width: "100%" }}>
         <Carousel.Item className="sliderContainer">
-          <video
+          <Image
+            width={100}
+            height={1000}
             className="video w-100 m-auto"
-            loop
-            muted
-            allowFullScreen={true}
-            ref={videoRef}
-            autoPlay={true}
-            playsInline>
-            <source src={`/assets/VIDEO_MIGAS.mp4`} />
-          </video>
+            // loop
+            // muted
+            // allowFullScreen={true}
+            // ref={videoRef}
+            // autoPlay={true}
+            // playsInline>
+            src={`/assets/mixgrillx4.jpg`}
+          />
         </Carousel.Item>
       </Carousel>
       <OrdersModal show={showModal} handleShow={handleShow} />
