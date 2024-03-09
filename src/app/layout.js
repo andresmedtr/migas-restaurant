@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CustomNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "@/styles/index.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Migas Steakhouse",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body>
         <CustomNavbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
