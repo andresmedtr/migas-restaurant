@@ -77,22 +77,43 @@ const CarouselPage = () => {
         onClick={handleShow}>
         ORDER NOW
       </motion.h5>
-      <Carousel interval={2000} style={{ width: "100%" }}>
+
+      <div className="sliderContainer w-100">
+        <Image
+          className="col-12 col-md-6 h-100"
+          width={1}
+          height={1}
+          src={"/assets/asadodetiras.jpg"}
+        />
+        <Image
+          className="col-12 col-md-6 h-100"
+          width={1}
+          height={1}
+          src={"/assets/4meatsample.jpg"}
+        />
+        <Image
+          className="col-12 h-100"
+          width={1}
+          height={1}
+          src={"/assets/mixgrillx4.jpg"}
+        />
+      </div>
+
+      {/* <Carousel interval={2000} style={{ width: "100%" }}>
         <Carousel.Item className="sliderContainer">
-          <Image
-            width={100}
-            height={1000}
+          <video
             className="video w-100 m-auto"
-            // loop
-            // muted
-            // allowFullScreen={true}
-            // ref={videoRef}
-            // autoPlay={true}
-            // playsInline>
-            src={`/assets/mixgrillx4.jpg`}
-          />
+            loop
+            muted
+            allowFullScreen={true}
+            ref={videoRef}
+            autoPlay={true}
+            playsInline>
+            <source src={`/assets/VIDEO_MIGAS.mp4`} />
+          </video>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
+
       <OrdersModal show={showModal} handleShow={handleShow} />
     </div>
   );

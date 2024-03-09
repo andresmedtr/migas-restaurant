@@ -105,9 +105,9 @@ const PlatesCarousel = () => {
       </div>
 
       <div className="mx-auto mt-3" data-aos="fade-down">
-        <div className="col-lg-12">
+        {/* <div className="col-lg-12">
           <h2 className="text-center mx-auto w-50">BUTCHERY</h2>
-        </div>
+        </div> */}
         {/* <Link href="/butchery"> */}
         {/* <Carousel className=" bg-dark rounded-3 mx-auto lowerCarousels">
             {menuData.butchery.steaks.map((item, index) => (
