@@ -47,8 +47,8 @@ const PromotionsCarousel = ({ slide }) => {
                 ) : (
                   <div className="rounded-4 w-75 mx-auto bg bg-dark text-center">
                     <Image
-                      width={100}
-                      height={100}
+                      width={1000}
+                      height={760}
                       src={`/assets/${item.image}`}
                       style={{ opacity: "0.6", height: "auto" }}
                       alt={`${index + 1} ${item.name}`}

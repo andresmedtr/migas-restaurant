@@ -9,10 +9,10 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import OrdersModal from "./OrdersModal";
 
 const CarouselPage = () => {
-  // const videoRef = useRef();
-  // useEffect(() => {
-  //   videoRef.current.play();
-  // }, []);
+  const videoRef = useRef();
+  useEffect(() => {
+    videoRef.current.play();
+  }, []);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -77,9 +77,20 @@ const CarouselPage = () => {
         onClick={handleShow}>
         ORDER NOW
       </motion.h5>
-
+      <div className="sliderShadow" />
       <div className="sliderContainer w-100">
-        <Image
+        <video
+          className="video w-100"
+          loop
+          muted
+          allowFullScreen={true}
+          ref={videoRef}
+          autoPlay={true}
+          playsInline>
+          <source src={`/assets/VIDEO_MIGAS.mp4`} />
+        </video>
+
+        {/* <Image
           className="col-12 col-md-6 h-100"
           width={1}
           height={1}
@@ -96,21 +107,12 @@ const CarouselPage = () => {
           width={1}
           height={1}
           src={"/assets/mixgrillx4.jpg"}
-        />
+        /> */}
       </div>
 
       {/* <Carousel interval={2000} style={{ width: "100%" }}>
         <Carousel.Item className="sliderContainer">
-          <video
-            className="video w-100 m-auto"
-            loop
-            muted
-            allowFullScreen={true}
-            ref={videoRef}
-            autoPlay={true}
-            playsInline>
-            <source src={`/assets/VIDEO_MIGAS.mp4`} />
-          </video>
+          
         </Carousel.Item>
       </Carousel> */}
 
