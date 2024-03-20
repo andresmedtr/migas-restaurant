@@ -10,9 +10,9 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const form = useRef();
 
-  const key = "nNDoDIArBqtTx2U9Y";
-  const serviceId = "service_dzhmstk";
-  const templateId = "template_oeautpj";
+  const key = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 
   // SENDING EMAIL LOGIC W/EMAILJS
   const sendEmail = (e) => {
@@ -23,10 +23,6 @@ const ContactForm = () => {
       const email = formData.get("from_email");
       const name = formData.get("from_name");
       const message = formData.get("message");
-
-      console.log("Email:", email);
-      console.log("Name:", name);
-      console.log("Message:", message);
 
       if (name.length < 3 || !email.includes("@") || message.length <= 5) {
         return false;
