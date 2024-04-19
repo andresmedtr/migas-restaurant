@@ -27,11 +27,11 @@ const Frame = () => {
         className="d-flex justify-content-center mt-3 w-75 m-auto"
         data-aos="fade-up">
         <iframe
-          title="virtual-visit"
           width="853"
           height="480"
-          src="https://my.matterport.com/show/?m=hyt1LxUGvDH"
-          allowFullScreen={true}
+          src="https://my.matterport.com/show/?m=iLZWLdSjjU5"
+          frameborder="0"
+          allowfullscreen
           allow="xr-spatial-tracking"></iframe>{" "}
       </div>
     </div>
