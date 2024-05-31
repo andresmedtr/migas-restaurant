@@ -6,21 +6,31 @@
   width: 10%;
 }
 
+.sides-button {
+  width: 25%;
+  background-color: #ffc107;
+  color: #000000;
+}
+
 .fixedButton button {
   font-size: 1rem;
 }
 
 .fixedButton button:hover {
-  border: 2px solid #b38203;
+  border: 2px solid #ffc107;
 
-  background: #8e6808;
-  scale: 1.1;
+  background: #e2a406;
+  transition: ease-in-out 300ms;
+  scale: 1.05;
 }
 
 .closeButton {
   position: absolute;
-  width: 100%;
+  width: min-content;
+  height: 1.5rem;
   top: 5%;
+  right: 40%;
+  color: #ffc107 !important;
   z-index: 1;
   cursor: pointer;
 }
@@ -35,10 +45,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .sidesButton {
-    width: 5%;
+  .sides-button {
+    margin-right: 1.35rem;
+    width: 100%;
+    background-color: #ffc107;
+    color: #000000;
   }
-
   .sidesImage {
     position: relative;
     width: 150px !important;
