@@ -1,1 +1,9 @@
-
+.footer-phone-number {
+  text-decoration: none;
+  color: white;
+}
+.footer-phone-number:hover {
+  transition: ease-in-out 100ms;
+  text-decoration: underline;
+  color: rgb(120, 152, 215);
+}

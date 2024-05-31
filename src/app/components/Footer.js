@@ -54,8 +54,14 @@ const Footer = () => {
             </p>
             <p>
               Reservations{" "}
-              <FontAwesomeIcon icon={faPhoneVolume} className="text-warning" />:
-              954-438-4242
+              <FontAwesomeIcon
+                icon={faPhoneVolume}
+                className="text-warning pe-1"
+              />
+              :
+              <a className="ps-1 footer-phone-number" href="tel:(954)4384242">
+                (954) 438-4242
+              </a>
             </p>
           </div>
         </div>

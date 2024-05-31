@@ -122,7 +122,6 @@ const MenuTabs = () => {
       {clickedSection === "Grilled" || clickedSection == "Chef's Specials" ? (
         <MenuSides />
       ) : null}
-      {/* <RenderMenu clickedSection={clickedSection} /> */}
       <div className="tab-content" id="nav-tabContent">
         {menuImgsSectionsArray.map((element, index) => {
           let item = element.name;

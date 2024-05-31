@@ -21,12 +21,12 @@ const OrdersModal = ({ show, handleShow }) => {
           <div className="mt-5 m-5">
             <h2 className="text-center">Take-Out</h2>
             <div className="text-center">
-              {/* <a
-                href="https://fndn.mn/rbh0p5eRg"
+              <a
+                href="https://order.toasttab.com/online/migas-steakhouse-16311-miramar-pkwy"
                 target="_blank"
-                rel="noreferrer"> */}
-              <Button className="btn btn-warning">COMING SOON!</Button>
-              {/* </a> */}
+                rel="noreferrer">
+                <Button className="btn btn-warning">Place your order!</Button>
+              </a>
             </div>
           </div>
           <div className="m-5 row w-100 mx-auto">
@@ -47,7 +47,7 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1 col"
                 rel="noreferrer">
                 <Image
-                  height={80}
+                  height={90}
                   width={5}
                   className="w-25 rounded col"
                   src="/assets/doordash.jpg"
@@ -60,7 +60,7 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1"
                 rel="noreferrer">
                 <Image
-                  height={80}
+                  height={90}
                   width={5}
                   src="/assets/ubereats.jpg"
                   className="w-25 rounded col"
@@ -73,7 +73,7 @@ const OrdersModal = ({ show, handleShow }) => {
                 className="m-1"
                 rel="noreferrer">
                 <Image
-                  height={80}
+                  height={90}
                   width={5}
                   src="/assets/postmates-logo.jpg"
                   className="w-25 rounded col"

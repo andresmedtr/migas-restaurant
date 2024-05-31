@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { Carousel } from "react-bootstrap";
 import "../../styles/carousel.css";
 import { motion } from "framer-motion";
 import "@fortawesome/fontawesome-svg-core/styles.css";

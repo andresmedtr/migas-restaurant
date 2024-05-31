@@ -16,11 +16,22 @@ const MenuSides = () => {
       <div className="d-flex justify-content-end fixedButton me-4">
         <button
           onClick={handleSides}
-          className={`btn align-items-center text-center ${
-            showSides && "d-none"
-          }`}
-          style={{ backgroundColor: "#FFA50080", color: "#000000" }}>
-          S<br />I<br />D<br />E<br />S
+          className={`btn ${showSides && "d-none"}`}
+          style={{
+            width: "80%",
+            backgroundColor: "#FFA50080",
+            color: "#000000",
+          }}>
+          <p className="m-auto">
+            S
+            <br />
+            I
+            <br />
+            D
+            <br />
+            E
+            <br />S
+          </p>
         </button>
       </div>
       {showSides && (
