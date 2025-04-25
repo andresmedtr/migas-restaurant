@@ -77,10 +77,11 @@ const ContactForm = () => {
           Contact Us
         </h2>
         <div className="text-center mt-5">
-          <h4 className="mb-5">Give us a call: (954)-438-4242</h4>
-          <h4>Operation Hours:</h4>
-          <h5>Monday - Wednesday: 7:30 AM - 9:00 PM</h5>
-          <h5>Thursday - Saturday: 7:30 AM - 10:00 PM</h5>
+          <h3 className="mb-5">Give us a call: (954)-438-4242</h3>
+          <h3>Operation Hours:</h3>
+          <h5>Monday - Thursday: 9:00 AM - 9:00 PM</h5>
+          <h5>Friday: 9:00 AM - 10:00 PM</h5>
+          <h5>Saturday: 8:00 AM - 10:00 PM</h5>
           <h5>Sunday: 8:00 AM - 9:00 PM</h5>
         </div>
       </div>
