@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../../styles/carousel.css";
+import "@/styles/carousel.css";
 import { motion } from "framer-motion";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 import OrdersModal from "./OrdersModal";
 
 const CarouselPage = () => {
@@ -31,7 +32,7 @@ const CarouselPage = () => {
       </div>
 
       <motion.h2
-        className="orderNow border-light border-bottom"
+        className="orderNow border-warning border-bottom"
         initial={{ y: -50 }}
         type="button"
         animate={{ y: 0 }}
@@ -40,10 +41,12 @@ const CarouselPage = () => {
           stiffness: 600,
           damping: 10,
           duration: 3,
-        }}
-        onClick={handleShow}>
-        ORDER NOW
+        }}>
+        <Link href="/menu" className="text-light text-decoration-none">
+          MENU
+        </Link>
       </motion.h2>
+
       <motion.h2
         initial={{ opacity: 0, x: 0, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
