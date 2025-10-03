@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "../../styles/frame.css";
+import "./../styles/frame.css";
 
 const Frame = () => {
   return (
@@ -30,8 +30,8 @@ const Frame = () => {
           width="853"
           height="480"
           src="https://my.matterport.com/show/?m=iLZWLdSjjU5"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           allow="xr-spatial-tracking"></iframe>{" "}
       </div>
     </div>

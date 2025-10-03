@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import About from "./components/About";
-import Carousel from "./components/Carousel";
-import Promotions from "./components/Promotions/Promotions";
-import PopularPlates from "./components/Specialties/PopularPlates";
+import About from "../components/About";
+import Carousel from "../components/Carousel";
+import Promotions from "../components/promotions/Promotions";
+import PopularPlates from "../components/specialties/PopularPlates";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Frame from "./components/Frame";
+import Frame from "../components/Frame";
 
 const Home = () => {
   useEffect(() => {

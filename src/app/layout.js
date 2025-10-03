@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import CustomNavbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import CustomNavbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "@/styles/index.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <GoogleTagManager gtmId="GTM-NSGXZ5PT" />
         <link
           rel="icon"
           type="image/png"

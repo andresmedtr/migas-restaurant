@@ -1,4 +1,4 @@
-import "../../styles/about.css";
+import "./../styles/about.css";
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -21,8 +21,8 @@ const About = () => {
           </motion.h1>
           <h4 className="titleDescription">
             Nestled in the heart of Miramar, Florida, since 2009,
-            <strong>Miga&apos;s Steakhouse</strong> is a heaven for connoisseurs
-            of top-quality steaks.
+            <strong> Miga&apos;s Steakhouse</strong> is a heaven for
+            connoisseurs of top-quality steaks.
           </h4>
         </div>
         <div className="contentContainer">
