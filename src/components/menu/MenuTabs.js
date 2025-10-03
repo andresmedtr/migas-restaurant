@@ -4,48 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import MenuSides from "./MenuSides";
 import { createClient } from "contentful";
+import { menuImgsSectionsArray } from "@/utils/constants";
 import { lazy } from "react";
 
 const MenuTabs = () => {
-  const menuImgsSectionsArray = [
-    { id: "appetizers", name: "Appetizers", file: ["ap1", "ap2", "ap3"] },
-    {
-      id: "grilled",
-      name: "Grilled",
-      file: ["grill3", "grill4", "grill5", "grill6", "grill7"],
-    },
-    {
-      id: "chefSpecials",
-      name: "Chef's Specials",
-      file: ["grill2", "grill1", "grill8"],
-    },
-    {
-      id: "breakfastsbrunch",
-      name: "Breakfasts/Brunch",
-      file: ["bf1", "bf2", "bf3", "brunch"],
-    },
-
-    {
-      id: "breads",
-      name: "Breads",
-      file: ["bread1", "bread2", "bread3"],
-    },
-    {
-      id: "pastas",
-      name: "Pastas",
-      file: ["pastas"],
-    },
-    {
-      id: "kids",
-      name: "Kids",
-      file: ["kids"],
-    },
-    { id: "veganFish", name: "Vegan & Fish", file: ["vegan", "fish"] },
-
-    { id: "desserts", name: "Desserts", file: ["desserts"] },
-    { id: "drinks", name: "Drinks", file: ["drinks", "drinks1"] },
-  ];
-
   const [menuImages, setMenuImages] = useState([]);
 
   // Sets the Clicked tab
@@ -87,7 +49,7 @@ const MenuTabs = () => {
       }
     };
     if (clickedSectionId) fetchMenuImages();
-  }, [clickedSectionId]);
+  }, [clickedSectionId, client]);
 
   // Returned Body
   return (
