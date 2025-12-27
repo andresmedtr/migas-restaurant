@@ -1,118 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useMemo, useState } from "react";
 import MenuSides from "./MenuSides";
-import { createClient } from "contentful";
+import MenuTabNav from "./MenuTabNav";
+import MenuTabPanel from "./MenuTabPanel";
 import { menuImgsSectionsArray } from "@/utils/constants";
-import { lazy } from "react";
+import { useMenuImages } from "@/hooks/useMenuImages";
+import "../../styles/menusides.css";
+
+const DEFAULT_SECTION = menuImgsSectionsArray[1];
 
 const MenuTabs = () => {
-  const [menuImages, setMenuImages] = useState([]);
+  const sections = useMemo(() => menuImgsSectionsArray, []);
 
-  // Sets the Clicked tab
-  const [clickedSection, setClickedSection] = useState(
-    menuImgsSectionsArray[1].name
-  );
-  // Set the ID of the clicked section to fetch from Contentful
-  const [clickedSectionId, setClickedSectionId] = useState(
-    menuImgsSectionsArray[1].id
-  );
+  const [active, setActive] = useState(DEFAULT_SECTION);
 
-  const client = createClient({
-    space: `${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
-    accessToken: `${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
-  });
+  const { images, loading } = useMenuImages(active?.id);
 
-  // This handles the selected tab and renders the PDF Menu for the specific TAB
-  const handleClick = (element) => {
-    setClickedSection(element.name);
-    setClickedSectionId(element.id);
-  };
+  const showSides =
+    active.name === "Grilled" || active.name === "Chef's Specials";
 
-  // fetching menu images from contentful
-  useEffect(() => {
-    const fetchMenuImages = async () => {
-      try {
-        const response = await client.getAssets({
-          "metadata.tags.sys.id[in]": clickedSectionId,
-          order: "-sys.createdAt",
-        });
-        const images = response.items.map((item) => ({
-          title: item.fields.title,
-          url: `https:${item.fields.file.url}`,
-        }));
-        setMenuImages(images);
-      } catch (error) {
-        console.error("Error fetching menu images:", error);
-        setTimeout(fetchMenuImages, 3000);
-      }
-    };
-    if (clickedSectionId) fetchMenuImages();
-  }, [clickedSectionId, client]);
-
-  // Returned Body
   return (
     <div className="pt-5">
-      <nav className="pt-3">
-        <div
-          className="nav nav-tabs d-flex w-100 justify-content-center"
-          id="nav-tab"
-          role="tablist">
-          {menuImgsSectionsArray.map((element, index) => {
-            let item = element.name;
-            return (
-              <button
-                key={index}
-                className={`nav-link col text-secondary fs-md-5 ${
-                  clickedSection === item ? "active" : ""
-                }`}
-                id={`nav-${item.toLowerCase()}-tab`}
-                data-bs-toggle="tab"
-                data-bs-target={`#nav-${item.toLowerCase()}`}
-                type="button"
-                role="tab"
-                aria-controls={`nav-${item.toLowerCase()}`}
-                onClick={() => handleClick(element)}
-                aria-selected={clickedSection === item}>
-                {item}
-              </button>
-            );
-          })}
-        </div>
-      </nav>
-      {clickedSection === "Grilled" || clickedSection == "Chef's Specials" ? (
-        <MenuSides />
-      ) : null}
+      <MenuTabNav
+        sections={sections}
+        activeName={active.name}
+        onSelect={setActive}
+      />
+
+      {showSides ? <MenuSides /> : null}
+
       <div className="tab-content" id="nav-tabContent">
-        {menuImgsSectionsArray.map((element, index) => {
-          let item = element.name;
-          return (
-            <div
-              key={index}
-              className={`tab-pane fade w-100 mx-auto ${
-                clickedSection === item ? "show active" : ""
-              }`}
-              id={`nav-${item.toLowerCase()}`}
-              role="tabpanel"
-              aria-labelledby={`nav-${item.toLowerCase()}-tab`}>
-              {clickedSection === item && (
-                <div className="w-100 mx-auto p-2 text-center">
-                  {menuImages.map((file, fileIndex) => (
-                    <Image
-                      src={file.url}
-                      className="menuImages mx-auto p-3 col-lg-3"
-                      width={450}
-                      height={600}
-                      alt={file.title}
-                      key={`${file.title}`}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
+        <MenuTabPanel images={images} loading={loading} />
       </div>
     </div>
   );
