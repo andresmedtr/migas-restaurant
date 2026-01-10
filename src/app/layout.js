@@ -3,6 +3,7 @@ import CustomNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "@/styles/index.css";
+
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {

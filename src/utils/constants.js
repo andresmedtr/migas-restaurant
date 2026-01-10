@@ -72,5 +72,5 @@ export const menuImgsSectionsArray = [
   { id: "veganFish", name: "Vegan & Fish", file: ["vegan", "fish"] },
 
   { id: "desserts", name: "Desserts", file: ["desserts"] },
-  { id: "drinks", name: "Drinks", file: ["drinks", "drinks1"] },
+  { id: "drinks", name: "Drinks", file: ["drinks"] },
 ];

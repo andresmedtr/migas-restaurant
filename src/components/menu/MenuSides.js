@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Draggable from "react-draggable";
-import "@/styles/menusides.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

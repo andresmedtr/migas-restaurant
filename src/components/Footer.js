@@ -14,11 +14,11 @@ const Footer = () => {
       <div className="">
         <div className="row d-flex">
           <div className="col">
-            <a href="/#about-us-section" className="link w-25">
+            <Link href="/#about-us-section" className="link w-25">
               <p className="text-uppercase font-weight-bold text-warning m-0 p-2">
                 About us
               </p>
-            </a>
+            </Link>
           </div>
           <div className="col p-2">
             <Link href="https://www.instagram.com/migas_florida/">
@@ -59,9 +59,11 @@ const Footer = () => {
                 className="text-warning pe-1"
               />
               :
-              <a className="ps-1 footer-phone-number" href="tel:(954)4384242">
+              <Link
+                className="ps-1 footer-phone-number"
+                href="tel:(954)4384242">
                 (954) 438-4242
-              </a>
+              </Link>
             </p>
           </div>
         </div>
