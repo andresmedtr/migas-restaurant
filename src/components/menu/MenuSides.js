@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import Draggable from "react-draggable";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -35,24 +34,22 @@ const MenuSides = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: -10 }}
           transition={{ duration: 1 }}>
-          <Draggable>
-            <div className="sides-container">
-              <FontAwesomeIcon
-                icon={faTimes}
-                onClick={handleSides}
-                className="align-items-center closeButton text-light"
-              />
+          <div className="sides-container">
+            <FontAwesomeIcon
+              icon={faTimes}
+              onClick={handleSides}
+              className="align-items-center closeButton text-light"
+            />
 
-              <Image
-                src="/assets/sides.png"
-                className="sidesImage"
-                width={250}
-                height={250}
-                alt="Sides"
-                key="image"
-              />
-            </div>
-          </Draggable>
+            <Image
+              src="/assets/sides.png"
+              className="sidesImage"
+              width={250}
+              height={250}
+              alt="Sides"
+              key="image"
+            />
+          </div>
         </motion.div>
       )}
     </div>
