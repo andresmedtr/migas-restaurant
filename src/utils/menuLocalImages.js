@@ -1,6 +1,6 @@
 import { menuImgsSectionsArray } from "@/utils/constants";
 
-const EXT = "png"; // change if needed
+const EXT = "svg"; // change if needed
 const BASE_PATH = "/assets/menuImg";
 
 export const localMenuImagesBySectionId = Object.fromEntries(
